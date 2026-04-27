@@ -9,6 +9,8 @@ import { FAQ } from './pages/FAQ';
 import { StaticPage } from './pages/Static';
 import { BlogList } from './pages/BlogList';
 import { BlogPost } from './pages/BlogPost';
+import { UnsupportedUrl } from './pages/UnsupportedUrl';
+import { DownloadAiVideoMp3 } from './pages/DownloadAiVideoMp3';
 import { useAnalytics } from './hooks/useAnalytics';
 import { changeLanguage, getCurrentLanguage, getLanguageDirection } from './config/i18n';
 
@@ -82,6 +84,9 @@ function App() {
             <Route path="contact" element={<StaticPage type="contact" />} />
             <Route path="blog" element={<BlogList />} />
             <Route path="blog/:slug" element={<BlogPost />} />
+            <Route path="unsupported-url" element={<UnsupportedUrl />} />
+            <Route path="convertisseur-video" element={<UnsupportedUrl />} />
+            <Route path="download-ai-video-mp3" element={<DownloadAiVideoMp3 />} />
           </Route>
         </Routes>
       </BrowserRouter>

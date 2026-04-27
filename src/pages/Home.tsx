@@ -72,7 +72,13 @@ export function Home() {
 
   return (
     <div className="flex flex-col items-center">
-      <SEO />
+      <SEO
+        title={result ? `Download "${result.title}" | MediaGrabber` : undefined}
+        description={result
+          ? `Download "${result.title}" from ${result.platform.name} in HD quality — free, fast, and secure with MediaGrabber.`
+          : undefined
+        }
+      />
 
       {/* Structured Data (SEO boost - invisible, safe) */}
       <script type="application/ld+json">

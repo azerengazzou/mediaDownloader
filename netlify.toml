@@ -1,0 +1,29 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+  functions = "netlify/functions"
+
+[[redirects]]
+  from = "/api/meta"
+  to = "/.netlify/functions/cobalt"
+  status = 200
+
+[[redirects]]
+  from = "/convertisseur-video"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/unsupported-url"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/download-ai-video-mp3"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

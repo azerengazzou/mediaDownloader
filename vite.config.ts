@@ -3,6 +3,14 @@ import react from '@vitejs/plugin-react';
 
 export default defineConfig({
   plugins: [react()],
+  server: {
+    proxy: {
+      '/api/meta': {
+        target: 'http://localhost:8888',
+        changeOrigin: true,
+      },
+    },
+  },
   optimizeDeps: {
     exclude: ['lucide-react'],
   },
