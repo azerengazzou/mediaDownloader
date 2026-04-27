@@ -8,6 +8,7 @@ import {
 import { DownloadResult, DownloadOption } from '../../hooks/useDownloader';
 import { cn } from '../../lib/utils';
 import { PLATFORM_ICONS } from './HistoryList';
+import { useAnalytics } from '../../hooks/useAnalytics';
 
 interface DownloadCardProps {
   result: DownloadResult;
@@ -15,6 +16,7 @@ interface DownloadCardProps {
 }
 
 export function DownloadCard({ result, onDownload }: DownloadCardProps) {
+  const { trackDownloadClick } = useAnalytics();
   const getIcon = (type: string) => {
     switch (type) {
       case 'video':
@@ -86,7 +88,10 @@ export function DownloadCard({ result, onDownload }: DownloadCardProps) {
             {result.options.map((option, idx) => (
               <button
                 key={idx}
-                onClick={() => onDownload(option)}
+                onClick={() => {
+                  trackDownloadClick(result.platform.id, option.type, option.quality);
+                  onDownload(option);
+                }}
                 className={cn(
                   'w-full flex items-center justify-between p-3 rounded-xl border transition-all hover:scale-[1.01] active:scale-[0.99]',
                   getButtonColor(option.type)

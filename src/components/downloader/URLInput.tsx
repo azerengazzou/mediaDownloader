@@ -2,6 +2,7 @@ import React from 'react';
 import { ArrowRight, Loader2, Link as LinkIcon, Search } from 'lucide-react';
 import { cn } from '../../lib/utils';
 import { PlatformConfig } from '../../lib/platforms';
+import { useAnalytics } from '../../hooks/useAnalytics';
 
 interface URLInputProps {
   url: string;
@@ -13,6 +14,8 @@ interface URLInputProps {
 }
 
 export function URLInput({ url, isLoading, error, platform, onChange, onSubmit }: URLInputProps) {
+  const { trackPasteClick } = useAnalytics();
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     onSubmit();
@@ -23,6 +26,7 @@ export function URLInput({ url, isLoading, error, platform, onChange, onSubmit }
       const text = await navigator.clipboard.readText();
       if (text) {
         onChange(text);
+        trackPasteClick();
       }
     } catch (err) {
       console.error('Failed to read clipboard', err);

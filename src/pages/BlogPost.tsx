@@ -1,12 +1,19 @@
 import { useParams, Link, Navigate } from 'react-router-dom';
+import { useEffect } from 'react';
 import { SEO } from '../components/SEO';
 import { getPostBySlug } from '../data/blog';
 import { Calendar, ArrowLeft, Download } from 'lucide-react';
 import { AdBlock } from '../components/layout/AdBlock';
+import { useAnalytics } from '../hooks/useAnalytics';
 
 export function BlogPost() {
   const { slug } = useParams<{ slug: string }>();
   const post = slug ? getPostBySlug(slug) : undefined;
+  const { trackBlogRead } = useAnalytics();
+
+  useEffect(() => {
+    if (post) trackBlogRead(post.slug, post.title);
+  }, [post?.slug]);
 
   if (!post) {
     return <Navigate to="/blog" replace />;

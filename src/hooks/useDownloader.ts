@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { detectPlatform, PlatformConfig } from '../lib/platforms';
+import { useAnalytics } from './useAnalytics';
 
 export interface DownloadOption {
   type: 'video' | 'audio' | 'thumbnail';
@@ -23,6 +24,7 @@ export function useDownloader() {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [result, setResult] = useState<DownloadResult | null>(null);
+  const { trackUrlSubmit, trackError } = useAnalytics();
 
   const handleUrlChange = (newUrl: string) => {
     setUrl(newUrl);
@@ -39,9 +41,11 @@ export function useDownloader() {
     const detected = detectPlatform(url);
     if (!detected) {
       setError('Unsupported platform or invalid URL');
+      trackError('Unsupported platform or invalid URL');
       return;
     }
 
+    trackUrlSubmit(detected.id);
     setIsLoading(true);
     setError(null);
     setResult(null);
@@ -69,7 +73,9 @@ export function useDownloader() {
       
       // We will handle saving to history later using another hook or context
     } catch {
-      setError('An error occurred while fetching the video. Please try again.');
+      const msg = 'An error occurred while fetching the video. Please try again.';
+      setError(msg);
+      trackError(msg);
     } finally {
       setIsLoading(false);
     }

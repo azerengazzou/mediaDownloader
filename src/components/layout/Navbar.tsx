@@ -2,9 +2,11 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Download, Moon, Sun, Menu, X } from 'lucide-react';
 import { useDarkMode } from '../../hooks/useDarkMode';
+import { useAnalytics } from '../../hooks/useAnalytics';
 
 export function Navbar() {
   const { isDark, toggle } = useDarkMode();
+  const { trackNavClick } = useAnalytics();
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
   const navLinks = [
@@ -35,6 +37,7 @@ export function Navbar() {
                 <Link
                   key={link.name}
                   to={link.path}
+                  onClick={() => trackNavClick(link.name)}
                   className="text-sm font-medium text-gray-600 hover:text-brand-600 dark:text-gray-300 dark:hover:text-brand-400 transition-colors"
                 >
                   {link.name}
@@ -79,7 +82,7 @@ export function Navbar() {
               <Link
                 key={link.name}
                 to={link.path}
-                onClick={() => setIsMenuOpen(false)}
+                onClick={() => { trackNavClick(link.name); setIsMenuOpen(false); }}
                 className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-brand-600 hover:bg-gray-50 dark:text-gray-300 dark:hover:text-brand-400 dark:hover:bg-gray-800"
               >
                 {link.name}

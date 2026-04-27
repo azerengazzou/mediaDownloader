@@ -2,6 +2,7 @@ import React from 'react';
 import { SEO } from '../components/SEO';
 import { ChevronDown, ChevronUp } from 'lucide-react';
 import { cn } from '../lib/utils';
+import { useAnalytics } from '../hooks/useAnalytics';
 
 const faqs = [
   {
@@ -28,6 +29,12 @@ const faqs = [
 
 export function FAQ() {
   const [openIndex, setOpenIndex] = React.useState<number | null>(0);
+  const { trackFaqOpen } = useAnalytics();
+
+  const handleToggle = (index: number) => {
+    if (openIndex !== index) trackFaqOpen(faqs[index].question);
+    setOpenIndex(openIndex === index ? null : index);
+  };
 
   const faqSchema = {
     "@context": "https://schema.org",
@@ -66,7 +73,7 @@ export function FAQ() {
             className="border border-gray-200 dark:border-gray-800 rounded-2xl bg-white dark:bg-gray-900 overflow-hidden transition-all duration-200"
           >
             <button
-              onClick={() => setOpenIndex(openIndex === index ? null : index)}
+              onClick={() => handleToggle(index)}
               className="w-full flex items-center justify-between p-6 text-left focus:outline-none"
             >
               <span className="font-semibold text-lg text-gray-900 dark:text-white">
