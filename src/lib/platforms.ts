@@ -1,5 +1,6 @@
 import React from 'react';
 import { Youtube, Instagram, Facebook, Twitter, Music2 } from 'lucide-react';
+
 export type Platform =
   | 'youtube'
   | 'tiktok'
@@ -14,6 +15,21 @@ export interface PlatformConfig {
   iconKey: Platform;
   color: string;
   regex: RegExp[];
+}
+
+// Icon mapping
+const iconMap: Record<Platform, React.FC<{ className?: string }>> = {
+  youtube: Youtube,
+  tiktok: Music2,
+  instagram: Instagram,
+  facebook: Facebook,
+  twitter: Twitter,
+  unknown: Music2,
+};
+
+export function getPlatformIcon(platform: PlatformConfig | null): React.FC<{ className?: string }> {
+  if (!platform) return Music2;
+  return iconMap[platform.iconKey] || Music2;
 }
 
 export const platforms: PlatformConfig[] = [

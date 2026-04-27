@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { SEO } from '../components/SEO';
 import { URLInput } from '../components/downloader/URLInput';
 import { DownloadCard } from '../components/downloader/DownloadCard';
@@ -10,6 +11,7 @@ import { useHistory } from '../hooks/useHistory';
 export function Home() {
   const { url, platform, isLoading, error, result, handleUrlChange, processUrl } = useDownloader();
   const { history, addToHistory, clearHistory, removeFromHistory } = useHistory();
+  const { t } = useTranslation();
 
   const handleDownload = async () => {
     await processUrl();
@@ -27,8 +29,7 @@ export function Home() {
     "@type": "WebApplication",
     name: "MediaGrabber",
     url: "https://mediagrabber.com",
-    description:
-      "Download videos and audio from YouTube, TikTok, Instagram, and Twitter instantly in high quality.",
+    description: t('site.description'),
     applicationCategory: "MultimediaApplication",
     operatingSystem: "All",
     offers: {
@@ -44,26 +45,26 @@ export function Home() {
     mainEntity: [
       {
         "@type": "Question",
-        name: "How do I download a YouTube video?",
+        name: t('faq.q1'),
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Paste the YouTube link into MediaGrabber and click download. Choose your preferred format and quality."
+          text: t('faq.a1')
         }
       },
       {
         "@type": "Question",
-        name: "Does MediaGrabber support TikTok downloads without watermark?",
+        name: t('faq.q2'),
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Yes, MediaGrabber supports TikTok video downloads in high quality, depending on availability of the source."
+          text: t('faq.a2')
         }
       },
       {
         "@type": "Question",
-        name: "Can I download Instagram reels and audio?",
+        name: t('faq.q3'),
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Yes, you can download Instagram reels and extract audio in MP3 format."
+          text: t('faq.a3')
         }
       }
     ]
@@ -89,17 +90,17 @@ export function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
 
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-heading mb-6 tracking-tight">
-            Download Any Video <br className="hidden md:block" />
-            <span className="text-gradient">Fast & Free</span>
+            {t('hero.title')} <br className="hidden md:block" />
+            <span className="text-gradient">{t('hero.subtitle')}</span>
           </h1>
 
           {/* SEO reinforcement text (NOT affecting UI hierarchy) */}
           <p className="text-sm text-gray-400 max-w-2xl mx-auto mb-2">
-            Download YouTube videos, TikTok clips, Instagram reels, and Twitter media in HD instantly.
+            {t('hero.description')}
           </p>
 
           <p className="text-lg md:text-xl text-gray-600 dark:text-gray-400 mb-10 max-w-2xl mx-auto">
-            Paste a link from YouTube, TikTok, Instagram, or Twitter to download high-quality videos and audio instantly.
+            {t('hero.description')}
           </p>
 
           <div className="mb-12">
@@ -133,28 +134,28 @@ export function Home() {
           {/* 🔥 SEO FAQ Section (hidden value driver, visible but compact) */}
           <div className="mt-16 text-left max-w-3xl mx-auto">
             <h2 className="text-2xl font-bold mb-6 text-center">
-              Frequently Asked Questions
+              {t('faq.title')}
             </h2>
 
             <div className="space-y-4">
               <div>
-                <h3 className="font-semibold">How do I use MediaGrabber?</h3>
+                <h3 className="font-semibold">{t('faq.q1')}</h3>
                 <p className="text-gray-600 dark:text-gray-400">
-                  Paste your video link and click download. The tool automatically detects the platform.
+                  {t('faq.a1')}
                 </p>
               </div>
 
               <div>
-                <h3 className="font-semibold">Is MediaGrabber free to use?</h3>
+                <h3 className="font-semibold">{t('faq.q4')}</h3>
                 <p className="text-gray-600 dark:text-gray-400">
-                  Yes, it is completely free to download videos and audio.
+                  {t('faq.a4')}
                 </p>
               </div>
 
               <div>
-                <h3 className="font-semibold">What platforms are supported?</h3>
+                <h3 className="font-semibold">{t('faq.q2')}</h3>
                 <p className="text-gray-600 dark:text-gray-400">
-                  YouTube, TikTok, Instagram, and Twitter (X) are supported.
+                  {t('faq.a2')}
                 </p>
               </div>
             </div>

@@ -1,0 +1,115 @@
+{
+    "site": {
+        "title": "MediaGrabber | محمل الفيديو المجاني الأول",
+        "description": "حمّل الفيديوهات والقصص والشرح والملفات الصوتية من YouTube و TikTok و Instagram وغيرها مع MediaGrabber. سريع وآمن وبالمجان.",
+        "tagline": "حمّل أي فيديو بسرعة وبالمجان"
+    },
+    "nav": {
+        "home": "الرئيسية",
+        "platforms": "المنصات المدعومة",
+        "faq": "أسئلة شائعة",
+        "blog": "المدونة",
+        "terms": "الشروط",
+        "privacy": "سياسة الخصوصية",
+        "contact": "تواصل معنا",
+        "language": "اللغة"
+    },
+    "hero": {
+        "title": "حمّل أي فيديو",
+        "subtitle": "بسرعة وبالمجان",
+        "description": "حمّل فيديوهات YouTube والقصص من TikTok والفيديوهات من Instagram وملفات Twitter بجودة عالية فوراً.",
+        "cta": "ابدأ التحميل الآن",
+        "secondaryCta": "اعرف المزيد"
+    },
+    "download": {
+        "inputPlaceholder": "الصق رابط الفيديو هنا...",
+        "buttonText": "حمّل",
+        "downloading": "جاري التحميل...",
+        "success": "بدأ التحميل!",
+        "error": "خطأ: يرجى التحقق من الرابط والمحاولة مجدداً",
+        "selectFormat": "اختر الصيغة",
+        "selectQuality": "اختر الجودة",
+        "downloadFile": "حمّل الملف",
+        "copyLink": "انسخ الرابط"
+    },
+    "history": {
+        "title": "سجل التحميل",
+        "empty": "لا توجد تحميلات حتى الآن",
+        "clear": "امسح السجل",
+        "clearConfirm": "هل أنت متأكد من رغبتك في حذف سجل التحميل?"
+    },
+    "platforms": {
+        "title": "المنصات المدعومة",
+        "description": "حمّل من جميع منصات الوسائط الاجتماعية والفيديو الرئيسية",
+        "youtube": "YouTube",
+        "tiktok": "TikTok",
+        "instagram": "Instagram",
+        "twitter": "Twitter/X",
+        "facebook": "Facebook",
+        "reddit": "Reddit",
+        "soundcloud": "SoundCloud",
+        "spotify": "Spotify",
+        "snapchat": "Snapchat",
+        "twitch": "Twitch"
+    },
+    "faq": {
+        "title": "الأسئلة الشائعة",
+        "q1": "كيف أحمّل فيديو من YouTube؟",
+        "a1": "ما عليك سوى لصق رابط YouTube في صندوق الإدخال والنقر على التحميل. اختر الصيغة والجودة المفضلة لديك، ثم انقر على التحميل مرة أخرى.",
+        "q2": "هل MediaGrabber يدعم تحميل TikTok بدون علامة مائية؟",
+        "a2": "نعم، MediaGrabber يدعم تحميل فيديوهات TikTok بجودة عالية بدون علامات مائية، حسب توفر المصدر.",
+        "q3": "هل يمكنني تحميل الفيديوهات والملفات الصوتية من Instagram؟",
+        "a3": "نعم، يمكنك تحميل الفيديوهات والصور من Instagram واستخراج الملفات الصوتية بصيغة MP3.",
+        "q4": "هل MediaGrabber مجاني؟",
+        "a4": "نعم، MediaGrabber مجاني تماماً. بدون تسجيل، بدون رسوم مخفية، بدون إعلانات.",
+        "q5": "هل من الآمن استخدام MediaGrabber؟",
+        "a5": "نعم، MediaGrabber آمن تماماً. نحن لا نخزن أي من معلوماتك الشخصية أو التحميلات.",
+        "q6": "ما الصيغ التي يمكنني تحميلها؟",
+        "a6": "نحن ندعم MP4 و MKV و AVI و MOV للفيديوهات و MP3 و FLAC و AAC و OGG للملفات الصوتية."
+    },
+    "footer": {
+        "copyright": "© 2024 MediaGrabber. جميع الحقوق محفوظة.",
+        "followUs": "تابعنا",
+        "contact": "تواصل معنا",
+        "privacy": "سياسة الخصوصية",
+        "terms": "شروط الخدمة",
+        "about": "عن",
+        "made_with": "تم إنشاؤه بـ ❤️ من قبل فريق MediaGrabber"
+    },
+    "errors": {
+        "invalidUrl": "يرجى إدخال رابط صحيح",
+        "unsupportedPlatform": "هذه المنصة غير مدعومة",
+        "generic": "حدث خطأ ما. يرجى المحاولة مجدداً.",
+        "networkError": "خطأ في الشبكة. يرجى التحقق من اتصالك.",
+        "timeout": "انتهت مهلة الانتظار. يرجى المحاولة مجدداً."
+    },
+    "success": {
+        "downloadStarted": "بدأ التحميل!",
+        "copiedToClipboard": "تم نسخ الرابط إلى الحافظة!",
+        "languageChanged": "تم تغيير اللغة بنجاح"
+    },
+    "blog": {
+        "title": "المدونة",
+        "readMore": "اقرأ المزيد",
+        "published": "نُشر في",
+        "author": "المؤلف",
+        "noArticles": "لم يتم العثور على أي مقالات",
+        "backToBlog": "العودة إلى المدونة"
+    },
+    "static": {
+        "terms": "شروط الخدمة",
+        "privacy": "سياسة الخصوصية",
+        "contact": "تواصل معنا"
+    },
+    "seo": {
+        "videoDownloader": "محمل الفيديو",
+        "audioDownloader": "محمل الملفات الصوتية",
+        "youtubeDownloader": "محمل YouTube",
+        "tiktokDownloader": "محمل TikTok",
+        "instagramDownloader": "محمل Instagram",
+        "freeDownload": "تحميل مجاني",
+        "online": "إنترنت",
+        "fast": "سريع",
+        "secure": "آمن"
+    }
+}

@@ -1,26 +1,37 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { Download, Moon, Sun, Menu, X } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 import { useDarkMode } from '../../hooks/useDarkMode';
 import { useAnalytics } from '../../hooks/useAnalytics';
+import { LanguageSwitcher } from '../LanguageSwitcher';
+import { getCurrentLanguage } from '../../config/i18n';
 
 export function Navbar() {
   const { isDark, toggle } = useDarkMode();
   const { trackNavClick } = useAnalytics();
+  const { t } = useTranslation();
+  const { lang } = useParams<{ lang?: string }>();
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
+  // Get the current language from URL or use default
+  const currentLang = lang || getCurrentLanguage();
+  const langPrefix = `/${currentLang}`;
+
   const navLinks = [
-    { name: 'Supported Sites', path: '/platforms' },
-    { name: 'FAQ', path: '/faq' },
-    { name: 'Blog', path: '/blog' },
+    { name: t('nav.platforms'), path: `${langPrefix}/platforms` },
+    { name: t('nav.faq'), path: `${langPrefix}/faq` },
+    { name: t('nav.blog'), path: `${langPrefix}/blog` },
   ];
+
+  const homePath = currentLang ? `/${currentLang}` : '/';
 
   return (
     <nav className="sticky top-0 z-50 w-full glass border-b">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
-            <Link to="/" className="flex items-center gap-2 group">
+            <Link to={homePath} className="flex items-center gap-2 group">
               <div className="p-2 bg-brand-500 rounded-xl group-hover:bg-brand-600 transition-colors">
                 <Download className="w-5 h-5 text-white" />
               </div>
@@ -44,8 +55,9 @@ export function Navbar() {
                 </Link>
               ))}
             </div>
-            
+
             <div className="flex items-center gap-4 border-l border-gray-200 dark:border-gray-700 pl-4">
+              <LanguageSwitcher />
               <button
                 onClick={toggle}
                 className="p-2 text-gray-500 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-800 rounded-full transition-colors"
@@ -58,6 +70,7 @@ export function Navbar() {
 
           {/* Mobile menu button */}
           <div className="flex items-center md:hidden gap-4">
+            <LanguageSwitcher />
             <button
               onClick={toggle}
               className="p-2 text-gray-500 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-800 rounded-full transition-colors"

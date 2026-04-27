@@ -1,0 +1,115 @@
+{
+    "site": {
+        "title": "MediaGrabber | Téléchargeur Vidéo Gratuit Premium",
+        "description": "Téléchargez des vidéos, shorts, reels et MP3 de YouTube, TikTok, Instagram et bien d'autres avec MediaGrabber. Rapide, gratuit et sécurisé.",
+        "tagline": "Téléchargez N'importe Quelle Vidéo Rapidement et Gratuitement"
+    },
+    "nav": {
+        "home": "Accueil",
+        "platforms": "Sites Supportés",
+        "faq": "FAQ",
+        "blog": "Blog",
+        "terms": "Conditions",
+        "privacy": "Politique de Confidentialité",
+        "contact": "Contact",
+        "language": "Langue"
+    },
+    "hero": {
+        "title": "Téléchargez N'importe Quelle Vidéo",
+        "subtitle": "Rapidement et Gratuitement",
+        "description": "Téléchargez les vidéos YouTube, les clips TikTok, les reels Instagram et les médias Twitter en HD instantanément.",
+        "cta": "Commencer à Télécharger",
+        "secondaryCta": "En Savoir Plus"
+    },
+    "download": {
+        "inputPlaceholder": "Collez l'URL vidéo ici...",
+        "buttonText": "Télécharger",
+        "downloading": "Téléchargement...",
+        "success": "Téléchargement démarré!",
+        "error": "Erreur: Veuillez vérifier l'URL et réessayer",
+        "selectFormat": "Sélectionner le format",
+        "selectQuality": "Sélectionner la qualité",
+        "downloadFile": "Télécharger le fichier",
+        "copyLink": "Copier le lien"
+    },
+    "history": {
+        "title": "Historique de Téléchargement",
+        "empty": "Aucun téléchargement pour le moment",
+        "clear": "Effacer l'Historique",
+        "clearConfirm": "Êtes-vous sûr de vouloir effacer votre historique de téléchargement?"
+    },
+    "platforms": {
+        "title": "Plates-formes Supportées",
+        "description": "Téléchargez à partir de toutes les principales plates-formes de médias sociaux et vidéo",
+        "youtube": "YouTube",
+        "tiktok": "TikTok",
+        "instagram": "Instagram",
+        "twitter": "Twitter/X",
+        "facebook": "Facebook",
+        "reddit": "Reddit",
+        "soundcloud": "SoundCloud",
+        "spotify": "Spotify",
+        "snapchat": "Snapchat",
+        "twitch": "Twitch"
+    },
+    "faq": {
+        "title": "Questions Fréquemment Posées",
+        "q1": "Comment télécharger une vidéo YouTube?",
+        "a1": "Collez simplement l'URL YouTube dans la zone de saisie et cliquez sur télécharger. Choisissez votre format et votre qualité préférés, puis cliquez à nouveau sur télécharger.",
+        "q2": "MediaGrabber prend-il en charge les téléchargements de TikTok sans filigrane?",
+        "a2": "Oui, MediaGrabber prend en charge les téléchargements de vidéos TikTok en haute qualité sans filigranes, selon la disponibilité de la source.",
+        "q3": "Puis-je télécharger les reels et l'audio d'Instagram?",
+        "a3": "Oui, vous pouvez télécharger les reels et les photos d'Instagram, et extraire l'audio au format MP3.",
+        "q4": "MediaGrabber est-il gratuit?",
+        "a4": "Oui, MediaGrabber est entièrement gratuit. Pas d'inscription, pas de frais cachés, pas de publicités.",
+        "q5": "Est-il sûr d'utiliser MediaGrabber?",
+        "a5": "Oui, MediaGrabber est complètement sûr. Nous ne stockons aucune de vos informations personnelles ou téléchargements.",
+        "q6": "Quels formats puis-je télécharger?",
+        "a6": "Nous prenons en charge MP4, MKV, AVI, MOV pour les vidéos et MP3, FLAC, AAC, OGG pour l'audio."
+    },
+    "footer": {
+        "copyright": "© 2024 MediaGrabber. Tous droits réservés.",
+        "followUs": "Suivez-Nous",
+        "contact": "Nous Contacter",
+        "privacy": "Politique de Confidentialité",
+        "terms": "Conditions de Service",
+        "about": "À Propos",
+        "made_with": "Fait avec ❤️ par l'équipe MediaGrabber"
+    },
+    "errors": {
+        "invalidUrl": "Veuillez entrer une URL valide",
+        "unsupportedPlatform": "Cette plate-forme n'est pas supportée",
+        "generic": "Une erreur s'est produite. Veuillez réessayer.",
+        "networkError": "Erreur réseau. Veuillez vérifier votre connexion.",
+        "timeout": "Délai d'attente dépassé. Veuillez réessayer."
+    },
+    "success": {
+        "downloadStarted": "Le téléchargement a commencé!",
+        "copiedToClipboard": "Lien copié dans le presse-papiers!",
+        "languageChanged": "Langue changée avec succès"
+    },
+    "blog": {
+        "title": "Blog",
+        "readMore": "Lire la Suite",
+        "published": "Publié",
+        "author": "Auteur",
+        "noArticles": "Aucun article trouvé",
+        "backToBlog": "Retour au Blog"
+    },
+    "static": {
+        "terms": "Conditions de Service",
+        "privacy": "Politique de Confidentialité",
+        "contact": "Nous Contacter"
+    },
+    "seo": {
+        "videoDownloader": "Téléchargeur de Vidéo",
+        "audioDownloader": "Téléchargeur Audio",
+        "youtubeDownloader": "Téléchargeur YouTube",
+        "tiktokDownloader": "Téléchargeur TikTok",
+        "instagramDownloader": "Téléchargeur Instagram",
+        "freeDownload": "Téléchargement Gratuit",
+        "online": "En Ligne",
+        "fast": "Rapide",
+        "secure": "Sécurisé"
+    }
+}

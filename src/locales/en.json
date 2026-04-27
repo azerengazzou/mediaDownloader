@@ -1,0 +1,115 @@
+{
+    "site": {
+        "title": "MediaGrabber | Free Premium Video Downloader",
+        "description": "Download videos, shorts, reels, and MP3s from YouTube, TikTok, Instagram, and more with MediaGrabber. Fast, free, and secure.",
+        "tagline": "Download Any Video Fast & Free"
+    },
+    "nav": {
+        "home": "Home",
+        "platforms": "Supported Sites",
+        "faq": "FAQ",
+        "blog": "Blog",
+        "terms": "Terms",
+        "privacy": "Privacy Policy",
+        "contact": "Contact",
+        "language": "Language"
+    },
+    "hero": {
+        "title": "Download Any Video",
+        "subtitle": "Fast & Free",
+        "description": "Download YouTube videos, TikTok clips, Instagram reels, and Twitter media in HD instantly.",
+        "cta": "Start Downloading Now",
+        "secondaryCta": "Learn More"
+    },
+    "download": {
+        "inputPlaceholder": "Paste video URL here...",
+        "buttonText": "Download",
+        "downloading": "Downloading...",
+        "success": "Download started!",
+        "error": "Error: Please check the URL and try again",
+        "selectFormat": "Select format",
+        "selectQuality": "Select quality",
+        "downloadFile": "Download File",
+        "copyLink": "Copy Link"
+    },
+    "history": {
+        "title": "Download History",
+        "empty": "No downloads yet",
+        "clear": "Clear History",
+        "clearConfirm": "Are you sure you want to clear your download history?"
+    },
+    "platforms": {
+        "title": "Supported Platforms",
+        "description": "Download from all major social media and video platforms",
+        "youtube": "YouTube",
+        "tiktok": "TikTok",
+        "instagram": "Instagram",
+        "twitter": "Twitter/X",
+        "facebook": "Facebook",
+        "reddit": "Reddit",
+        "soundcloud": "SoundCloud",
+        "spotify": "Spotify",
+        "snapchat": "Snapchat",
+        "twitch": "Twitch"
+    },
+    "faq": {
+        "title": "Frequently Asked Questions",
+        "q1": "How do I download a YouTube video?",
+        "a1": "Simply paste the YouTube URL into the input box and click download. Choose your preferred format and quality, then click download again.",
+        "q2": "Does MediaGrabber support TikTok downloads without watermark?",
+        "a2": "Yes, MediaGrabber supports TikTok video downloads in high quality without watermarks, depending on the source availability.",
+        "q3": "Can I download Instagram reels and audio?",
+        "a3": "Yes, you can download Instagram reels, photos, and extract audio in MP3 format.",
+        "q4": "Is MediaGrabber free to use?",
+        "a4": "Yes, MediaGrabber is 100% free. No registration, no hidden fees, no ads.",
+        "q5": "Is it safe to use MediaGrabber?",
+        "a5": "Yes, MediaGrabber is completely safe. We don't store any of your personal information or downloads.",
+        "q6": "What formats can I download?",
+        "a6": "We support MP4, MKV, AVI, MOV for videos and MP3, FLAC, AAC, OGG for audio."
+    },
+    "footer": {
+        "copyright": "© 2024 MediaGrabber. All rights reserved.",
+        "followUs": "Follow Us",
+        "contact": "Contact Us",
+        "privacy": "Privacy Policy",
+        "terms": "Terms of Service",
+        "about": "About",
+        "made_with": "Made with ❤️ by the MediaGrabber team"
+    },
+    "errors": {
+        "invalidUrl": "Please enter a valid URL",
+        "unsupportedPlatform": "This platform is not supported",
+        "generic": "An error occurred. Please try again.",
+        "networkError": "Network error. Please check your connection.",
+        "timeout": "Request timeout. Please try again."
+    },
+    "success": {
+        "downloadStarted": "Download has started!",
+        "copiedToClipboard": "Link copied to clipboard!",
+        "languageChanged": "Language changed successfully"
+    },
+    "blog": {
+        "title": "Blog",
+        "readMore": "Read More",
+        "published": "Published",
+        "author": "Author",
+        "noArticles": "No articles found",
+        "backToBlog": "Back to Blog"
+    },
+    "static": {
+        "terms": "Terms of Service",
+        "privacy": "Privacy Policy",
+        "contact": "Contact Us"
+    },
+    "seo": {
+        "videoDownloader": "Video Downloader",
+        "audioDownloader": "Audio Downloader",
+        "youtubeDownloader": "YouTube Downloader",
+        "tiktokDownloader": "TikTok Downloader",
+        "instagramDownloader": "Instagram Downloader",
+        "freeDownload": "Free Download",
+        "online": "Online",
+        "fast": "Fast",
+        "secure": "Secure"
+    }
+}
