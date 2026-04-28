@@ -12,7 +12,7 @@ interface SEOProps {
 }
 
 export function SEO({
-  title = "MediaGrabber | Fast Free Social Media Downloader",
+  title = "MediaGrabber — Free Video Downloader for YouTube & TikTok",
   description = "Download videos, reels, shorts, and MP3s from YouTube, TikTok, Instagram, and more in high quality. 100% free and secure.",
   canonical,
   schema,
