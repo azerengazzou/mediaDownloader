@@ -46,7 +46,7 @@ export function SEO({
   });
 
   // Default Software Application Schema with multilingual support
-  const defaultSchema = {
+  const applicationSchema = {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
     "name": "MediaGrabber",
@@ -62,6 +62,37 @@ export function SEO({
     "url": currentCanonical,
     "image": `${baseUrl}/MediaGrabberIcon.png`
   };
+
+  // Organization identity schema to improve identity signals
+  const organizationSchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "MediaGrabber",
+    "url": baseUrl,
+    "logo": `${baseUrl}/MediaGrabberIcon.png`,
+    "sameAs": [
+      "https://twitter.com/mediagrabber",
+      "https://www.facebook.com/mediagrabber",
+      "https://www.linkedin.com/company/mediagrabber"
+    ]
+  };
+
+  // WebSite schema to tie the pages together and improve search identity
+  const websiteSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "MediaGrabber",
+    "url": baseUrl,
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": `${baseUrl}/search?q={search_term_string}`,
+      "query-input": "required name=search_term_string"
+    }
+  };
+
+  // Combine schemas: organization, website, application, and optionally user-provided schema
+  const combinedSchema: Array<Record<string, unknown>> = [organizationSchema, websiteSchema, applicationSchema];
+  if (schema) combinedSchema.push(schema as Record<string, unknown>);
 
   return (
     <Helmet>
@@ -106,7 +137,7 @@ export function SEO({
 
       {/* JSON-LD Schema */}
       <script type="application/ld+json">
-        {JSON.stringify(schema || defaultSchema)}
+        {JSON.stringify(combinedSchema)}
       </script>
 
       {/* Mobile Web App Meta Tags */}
