@@ -11,6 +11,69 @@ import { useHistory } from '../hooks/useHistory';
 import { useLocalizedBlogPosts } from '../data/blogI18n';
 import { ArrowRight, BookOpen } from 'lucide-react';
 
+const STREAMS = [
+  { id: 'bein1', label: 'فياريال - ليفانتي', src: 'https://6.wwwkora.com/albaplayer/bein-sports-hd-1/?serv=0' },
+  { id: 'bein2', label: 'فالنسيا - أتلتيكو مدريد', src: 'https://dns22.yalla-sport.link/chtv/ch3.php' },
+  { id: 'bein3', label: 'بايرن ميونخ - هايدنهايم ', src: 'https://5.wwwkora.com/albaplayer/bein-sports-hd-7/' },
+  { id: 'bein4', label: ' - أولمبيك مرسيليا- نانت', src: 'https://5.wwwkora.com/albaplayer/bein-sports-hd-6/' },
+  { id: 'bein5', label: 'نيوكاسل ـ برايتون ', src: 'https://5.wwwkora.com/albaplayer/bein-sports-hd-4/' },
+  { id: 'bein6', label: 'بريتفورد ـ وست هام', src: 'https://5.wwwkora.com/albaplayer/bein-sports-hd-1/' },
+  { id: 'beinmax', label: 'فالنسيا ـ اتلتيكو مدريد', src: 'https://11.yallashoot1.cc/albaplayer/bein-2/?serv=0' },
+  { id: 'aljazeera', label: 'پاريس سان جيرمان ـ لوريان ', src: 'https://11.yallashoot1.cc/albaplayer/bein-2/?serv=0' }
+];
+
+function LiveStreamTabs() {
+  const [active, setActive] = React.useState(STREAMS[1].id);
+  const current = STREAMS.find(s => s.id === active) ?? STREAMS[1];
+
+  return (
+    <div>
+      {/* Tab bar — scrollable on mobile */}
+      <div className="flex gap-2 overflow-x-auto pb-2 mb-4 scrollbar-hide" role="tablist" aria-label="Live football streams">
+        {STREAMS.map((stream) => (
+          <button
+            key={stream.id}
+            role="tab"
+            aria-selected={active === stream.id}
+            aria-controls={`panel-${stream.id}`}
+            onClick={() => setActive(stream.id)}
+            className={`flex-shrink-0 px-4 py-2 rounded-xl text-sm font-semibold transition-all ${active === stream.id
+              ? 'bg-brand-500 text-white shadow-md shadow-brand-500/30'
+              : 'bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:bg-brand-50 dark:hover:bg-gray-700 hover:text-brand-600 dark:hover:text-brand-400'
+              }`}
+          >
+            {stream.label}
+          </button>
+        ))}
+      </div>
+
+      {/* Player */}
+      <div
+        id={`panel-${current.id}`}
+        role="tabpanel"
+        aria-label={`${current.label} live stream`}
+        className="w-full rounded-2xl overflow-hidden shadow-lg border border-gray-200 dark:border-gray-700"
+      >
+        <iframe
+          key={current.src}
+          src={current.src}
+          width="100%"
+          height="500px"
+          frameBorder="0"
+          scrolling="yes"
+          allowFullScreen
+          title={`${current.label} — Live Football Stream`}
+          loading="lazy"
+        />
+      </div>
+
+      <p className="mt-3 text-xs text-center text-gray-400 dark:text-gray-500">
+        {current.label} — Live Football Stream • بث مباشر
+      </p>
+    </div>
+  );
+}
+
 export function Home() {
   const { url, platform, isLoading, error, result, handleUrlChange, processUrl } = useDownloader();
   const { history, addToHistory, clearHistory, removeFromHistory } = useHistory();
@@ -230,20 +293,9 @@ export function Home() {
       <section className="w-full bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800 py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl font-bold font-heading text-gray-900 dark:text-white mb-6 text-center">
-            Live Sports Stream - قناة بي إن سبورت 6 – beIN Sports 6 – بث مباشر مباريات اليوم مجانا
+            🔴 Live Football Streams — بث مباشر مباريات اليوم مجانًا
           </h2>
-          <div className="w-full rounded-2xl overflow-hidden shadow-lg border border-gray-200 dark:border-gray-700">
-            <iframe
-              src="https://6.wwwkora.com/albaplayer/bein-sports-hd-2/?serv=0"
-              width="100%"
-              height="500px"
-              frameBorder="0"
-              scrolling="yes"
-              allowFullScreen
-              title="Live Sports Stream — beIN Sports HD 2"
-              loading="lazy"
-            />
-          </div>
+          <LiveStreamTabs />
         </div>
       </section>
 
