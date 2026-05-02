@@ -1,8 +1,8 @@
 import { Link, useParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { Download, Twitter, Facebook, Instagram, Github } from 'lucide-react';
-import { AdBlock } from './AdBlock';
 import { getCurrentLanguage } from '../../config/i18n';
+import { AdsterraNativeBanner } from './AdBlock';
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -71,7 +71,7 @@ export function Footer() {
 
         {/* Footer Ad Banner */}
         <div className="my-8 hidden md:block">
-          <AdBlock format="leaderboard" />
+          <AdsterraNativeBanner />
         </div>
 
         <div className="border-t border-gray-200 dark:border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
@@ -83,7 +83,7 @@ export function Footer() {
 
       {/* Sticky Mobile Footer Ad */}
       <div className="md:hidden fixed bottom-0 w-full bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800 z-50">
-        <AdBlock format="fluid" className="h-[60px]" />
+        <AdsterraNativeBanner />
       </div>
     </footer>
   );

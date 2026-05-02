@@ -9,6 +9,7 @@ import { FAQ } from './pages/FAQ';
 import { StaticPage } from './pages/Static';
 import { BlogList } from './pages/BlogList';
 import { BlogPost } from './pages/BlogPost';
+import { BlogCategory } from './pages/BlogCategory';
 import { UnsupportedUrl } from './pages/UnsupportedUrl';
 import { DownloadAiVideoMp3 } from './pages/DownloadAiVideoMp3';
 import { useAnalytics } from './hooks/useAnalytics';
@@ -30,30 +31,40 @@ function LanguageRoute() {
   const { i18n } = useTranslation();
 
   useEffect(() => {
-    // Extract language from URL path
     const pathParts = location.pathname.split('/').filter(Boolean);
     const langFromUrl = pathParts[0];
     const supportedLangs = ['en', 'fr', 'ar'];
 
     if (supportedLangs.includes(langFromUrl)) {
-      if (i18n.language !== langFromUrl) {
-        changeLanguage(langFromUrl);
-      }
+      if (i18n.language !== langFromUrl) changeLanguage(langFromUrl);
     } else {
-      // Use default language if not in URL
       const detectedLang = getCurrentLanguage();
-      if (i18n.language !== detectedLang) {
-        changeLanguage(detectedLang);
-      }
+      if (i18n.language !== detectedLang) changeLanguage(detectedLang);
     }
 
-    // Update HTML attributes
     document.documentElement.lang = i18n.language;
     document.documentElement.dir = getLanguageDirection();
   }, [location, i18n]);
 
   return null;
 }
+
+const sharedRoutes = (
+  <>
+    <Route index element={<Home />} />
+    <Route path="platforms" element={<Platforms />} />
+    <Route path="faq" element={<FAQ />} />
+    <Route path="terms" element={<StaticPage type="terms" />} />
+    <Route path="privacy" element={<StaticPage type="privacy" />} />
+    <Route path="contact" element={<StaticPage type="contact" />} />
+    <Route path="blog" element={<BlogList />} />
+    <Route path="blog/category/:category" element={<BlogCategory />} />
+    <Route path="blog/:slug" element={<BlogPost />} />
+    <Route path="unsupported-url" element={<UnsupportedUrl />} />
+    <Route path="convertisseur-video" element={<UnsupportedUrl />} />
+    <Route path="download-ai-video-mp3" element={<DownloadAiVideoMp3 />} />
+  </>
+);
 
 function App() {
   return (
@@ -62,31 +73,11 @@ function App() {
         <PageViewTracker />
         <LanguageRoute />
         <Routes>
-          {/* Language-prefixed routes */}
           <Route path="/:lang" element={<Layout />}>
-            <Route index element={<Home />} />
-            <Route path="platforms" element={<Platforms />} />
-            <Route path="faq" element={<FAQ />} />
-            <Route path="terms" element={<StaticPage type="terms" />} />
-            <Route path="privacy" element={<StaticPage type="privacy" />} />
-            <Route path="contact" element={<StaticPage type="contact" />} />
-            <Route path="blog" element={<BlogList />} />
-            <Route path="blog/:slug" element={<BlogPost />} />
+            {sharedRoutes}
           </Route>
-
-          {/* Default routes without language prefix (fallback) */}
           <Route path="/" element={<Layout />}>
-            <Route index element={<Home />} />
-            <Route path="platforms" element={<Platforms />} />
-            <Route path="faq" element={<FAQ />} />
-            <Route path="terms" element={<StaticPage type="terms" />} />
-            <Route path="privacy" element={<StaticPage type="privacy" />} />
-            <Route path="contact" element={<StaticPage type="contact" />} />
-            <Route path="blog" element={<BlogList />} />
-            <Route path="blog/:slug" element={<BlogPost />} />
-            <Route path="unsupported-url" element={<UnsupportedUrl />} />
-            <Route path="convertisseur-video" element={<UnsupportedUrl />} />
-            <Route path="download-ai-video-mp3" element={<DownloadAiVideoMp3 />} />
+            {sharedRoutes}
           </Route>
         </Routes>
       </BrowserRouter>

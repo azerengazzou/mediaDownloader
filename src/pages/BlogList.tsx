@@ -1,9 +1,12 @@
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import { SEO } from '../components/SEO';
-import { blogPosts } from '../data/blog';
+import { useLocalizedBlogPosts } from '../data/blogI18n';
 import { Calendar, ArrowRight } from 'lucide-react';
 
 export function BlogList() {
+  const { t } = useTranslation();
+  const blogPosts = useLocalizedBlogPosts();
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
       <SEO
@@ -13,10 +16,10 @@ export function BlogList() {
 
       <div className="text-center mb-16">
         <h1 className="text-4xl font-bold font-heading mb-4 text-gray-900 dark:text-white">
-          The MediaGrabber Blog
+          {t('blog.title')}
         </h1>
         <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-          Tips, tricks, and guides on how to get the most out of social media downloads.
+          {t('blog.listSubtitle', 'Tips, tricks, and guides on how to get the most out of social media downloads.')}
         </p>
       </div>
 
@@ -59,7 +62,7 @@ export function BlogList() {
                 to={`/blog/${post.slug}`}
                 className="inline-flex items-center gap-2 text-brand-600 dark:text-brand-400 font-medium hover:text-brand-700 dark:hover:text-brand-300 transition-colors mt-auto"
               >
-                Read Article <ArrowRight className="w-4 h-4" />
+                {t('blog.readMore')} <ArrowRight className="w-4 h-4" />
               </Link>
             </div>
           </article>

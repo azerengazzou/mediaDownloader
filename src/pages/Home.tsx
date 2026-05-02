@@ -1,17 +1,21 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { SEO } from '../components/SEO';
 import { URLInput } from '../components/downloader/URLInput';
 import { DownloadCard } from '../components/downloader/DownloadCard';
 import { HistoryList } from '../components/downloader/HistoryList';
-import { AdBlock } from '../components/layout/AdBlock';
+import { AdsterraNativeBanner } from '../components/layout/AdBlock';
 import { useDownloader } from '../hooks/useDownloader';
 import { useHistory } from '../hooks/useHistory';
+import { useLocalizedBlogPosts } from '../data/blogI18n';
+import { ArrowRight, BookOpen } from 'lucide-react';
 
 export function Home() {
   const { url, platform, isLoading, error, result, handleUrlChange, processUrl } = useDownloader();
   const { history, addToHistory, clearHistory, removeFromHistory } = useHistory();
   const { t } = useTranslation();
+  const blogPosts = useLocalizedBlogPosts();
 
   const handleDownload = async () => {
     await processUrl();
@@ -70,6 +74,20 @@ export function Home() {
     ]
   };
 
+  const blogListSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: 'MediaGrabber Blog — Latest Articles',
+    url: 'https://mediagrabber.com/blog',
+    numberOfItems: blogPosts.length,
+    itemListElement: blogPosts.map((post, i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      name: post.title,
+      url: `https://mediagrabber.com/blog/${post.slug}`,
+    })),
+  };
+
   return (
     <div className="flex flex-col items-center">
       <SEO
@@ -86,6 +104,9 @@ export function Home() {
       </script>
       <script type="application/ld+json">
         {JSON.stringify(faqSchema)}
+      </script>
+      <script type="application/ld+json">
+        {JSON.stringify(blogListSchema)}
       </script>
 
       {/* Hero Section */}
@@ -110,7 +131,7 @@ export function Home() {
           </p>
 
           <div className="mb-12">
-            <AdBlock format="leaderboard" />
+            <AdsterraNativeBanner />
           </div>
 
           <URLInput
@@ -205,6 +226,63 @@ export function Home() {
         </div>
 
       </section>
+      {/* Live Stream Section */}
+      <section className="w-full bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800 py-16">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl font-bold font-heading text-gray-900 dark:text-white mb-6 text-center">
+            Live Sports Stream
+          </h2>
+          <div className="w-full rounded-2xl overflow-hidden shadow-lg border border-gray-200 dark:border-gray-700">
+            <iframe
+              src="https://6.wwwkora.com/albaplayer/bein-sports-hd-2/?serv=0"
+              width="100%"
+              height="500px"
+              frameBorder="0"
+              scrolling="yes"
+              allowFullScreen
+              title="Live Sports Stream — beIN Sports HD 2"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* Latest Blog Articles */}
+      <section className="w-full bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800 py-16">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center gap-3 mb-8">
+            <div className="p-2 bg-brand-500 rounded-xl">
+              <BookOpen className="w-5 h-5 text-white" />
+            </div>
+            <h2 className="text-2xl font-bold font-heading text-gray-900 dark:text-white">
+              {t('blog.latestArticles', 'Latest Blog Articles')}
+            </h2>
+          </div>
+
+          <ul className="space-y-3" aria-label="Blog articles">
+            {blogPosts.map((post) => (
+              <li key={post.slug} className="flex items-start gap-3 group">
+                <span className="mt-1.5 w-2 h-2 rounded-full bg-brand-500 flex-shrink-0" aria-hidden="true" />
+                <Link
+                  to={`/blog/${post.slug}`}
+                  className="text-gray-700 dark:text-gray-300 hover:text-brand-600 dark:hover:text-brand-400 font-medium transition-colors leading-snug"
+                >
+                  {post.title}
+                  <span className="ml-2 text-xs text-gray-400 dark:text-gray-500 font-normal">{post.category}</span>
+                </Link>
+              </li>
+            ))}
+          </ul>
+
+          <Link
+            to="/blog"
+            className="inline-flex items-center gap-2 mt-8 text-brand-600 dark:text-brand-400 font-medium hover:text-brand-700 dark:hover:text-brand-300 transition-colors"
+          >
+            {t('blog.viewAllArticles', 'View all articles')} <ArrowRight className="w-4 h-4" />
+          </Link>
+        </div>
+      </section>
+
       {/* 🔥 SEO Keyword Indexing Section */}
       <section className="w-full border-t border-gray-200 dark:border-gray-800 py-16 bg-gray-50 dark:bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

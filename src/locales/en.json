@@ -94,7 +94,21 @@
         "published": "Published",
         "author": "Author",
         "noArticles": "No articles found",
-        "backToBlog": "Back to Blog"
+        "backToBlog": "Back to Blog",
+        "allPosts": "All Posts",
+        "article": "article",
+        "articles": "articles",
+        "guidesCategoryTitle": "Social Media Download Guides",
+        "guidesCategoryDesc": "Step-by-step guides to download videos from YouTube, TikTok, Instagram, Snapchat and more — free, fast, and without watermarks.",
+        "browseCategory": "Browse all",
+        "articlesOn": "articles on MediaGrabber",
+        "latestArticles": "Latest Blog Articles",
+        "viewAllArticles": "View all articles",
+        "listSubtitle": "Tips, tricks, and guides on how to get the most out of social media downloads.",
+        "byAuthor": "By MediaGrabber Team",
+        "ctaTitle": "Ready to download?",
+        "ctaDescription": "Try MediaGrabber now and download your favorite videos for free.",
+        "goToDownloader": "Go to Downloader"
     },
     "static": {
         "terms": "Terms of Service",

@@ -2,7 +2,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Download, Zap, Shield, Star, Music, Video, ArrowRight, Loader2, Search } from 'lucide-react';
 import { SEO } from '../components/SEO';
-import { AdBlock } from '../components/layout/AdBlock';
+import { AdsterraNativeBanner } from '../components/layout/AdBlock';
 import { detectPlatform } from '../lib/platforms';
 
 export function DownloadAiVideoMp3() {
@@ -66,7 +66,7 @@ export function DownloadAiVideoMp3() {
 
           {/* Ad */}
           <div className="mb-10">
-            <AdBlock format="leaderboard" />
+            <AdsterraNativeBanner />
           </div>
 
           {/* Input */}
@@ -126,7 +126,7 @@ export function DownloadAiVideoMp3() {
 
       {/* Ad */}
       <div className="w-full max-w-5xl mx-auto px-4 py-8">
-        <AdBlock format="leaderboard" />
+        <AdsterraNativeBanner />
       </div>
 
       {/* FAQ — schema-ready */}
@@ -147,15 +147,17 @@ export function DownloadAiVideoMp3() {
       </section>
 
       {/* JSON-LD FAQ Schema */}
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
-        '@context': 'https://schema.org',
-        '@type': 'FAQPage',
-        mainEntity: faqs.map(faq => ({
-          '@type': 'Question',
-          name: faq.q,
-          acceptedAnswer: { '@type': 'Answer', text: faq.a },
-        })),
-      })}} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{
+        __html: JSON.stringify({
+          '@context': 'https://schema.org',
+          '@type': 'FAQPage',
+          mainEntity: faqs.map(faq => ({
+            '@type': 'Question',
+            name: faq.q,
+            acceptedAnswer: { '@type': 'Answer', text: faq.a },
+          })),
+        })
+      }} />
 
       {/* SEO keyword section */}
       <section className="w-full border-t border-gray-200 dark:border-gray-800 py-12 bg-white dark:bg-gray-900">

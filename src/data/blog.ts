@@ -3,9 +3,10 @@ export interface BlogPostMeta {
   title: string;
   excerpt: string;
   date: string;
+  isoDate: string;
   category: string;
   image: string;
-  content: string; // Storing as HTML/Markdown string for simplicity
+  content: string;
 }
 
 export const blogPosts: BlogPostMeta[] = [
@@ -14,7 +15,8 @@ export const blogPosts: BlogPostMeta[] = [
     title: 'How to download YouTube videos on iPhone (2026 guide)',
     excerpt: 'Step-by-step guide to saving YouTube videos directly to your iPhone camera roll in 2026.',
     date: 'April 26, 2026',
-    category: 'Guides',
+    isoDate: '2026-04-26',
+    category: 'Social Media Download Guides',
     image: 'https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=800&q=80',
     content: `
       <h2>Saving YouTube Videos to Your iPhone</h2>
@@ -35,6 +37,7 @@ export const blogPosts: BlogPostMeta[] = [
     title: 'iPhone 18 Pro Max: features, price and release date (2026)',
     excerpt: 'Everything you need to know about the iPhone 18 Pro Max, including design, performance, camera upgrades and expected price.',
     date: 'April 29, 2026',
+    isoDate: '2026-04-29',
     category: 'Tech',
     image: 'https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800&q=80',
     content: `
@@ -67,10 +70,11 @@ export const blogPosts: BlogPostMeta[] = [
   `
   },
   {
-    slug: 'shakhtar-donetsk-vs-crystal-palace-live-30-04-2026-conference-league-semi-final',
+    slug: 'shakhtar-donetsk-vs-crystal-palace-live-conference-league-semi-final',
     title: 'Shakhtar Donetsk vs Crystal Palace Live 30-04-2026 | Time, Venue & Conference League Semi Final',
     excerpt: 'Check match details, kick-off time, stadium and live updates for Shakhtar Donetsk vs Crystal Palace Conference League semi-final 2026.',
-    date: 'April 29, 2026',
+    date: '2026',
+    isoDate: '2026-04-29',
     category: 'Sports',
     image: 'https://www.yallakora.to/wp-content/uploads/2026/04/featured-match-image-2170.png',
     content: `
@@ -122,10 +126,11 @@ export const blogPosts: BlogPostMeta[] = [
   `
   },
   {
-    slug: 'usm-alger-vs-cr-belouizdad-live-30-04-2026-algeria-cup-final',
-    title: 'USM Alger vs CR Belouizdad Live 30-04-2026 | Time, Channel & Algeria Cup Final',
+    slug: 'usm-alger-vs-cr-belouizdad-live-algeria-cup-final',
+    title: 'USM Alger vs CR Belouizdad Live | Time, Channel & Algeria Cup Final',
     excerpt: 'Watch USM Alger vs CR Belouizdad live today. Check match time, date, TV channel and full details of the Algeria Cup final 2026.',
-    date: 'April 29, 2026',
+    date: '2026',
+    isoDate: '2026-04-29',
     category: 'Sports',
     image: 'https://i.ytimg.com/vi/SdIQqye-5vQ/sddefault.jpg?v=61cb1061',
     content: `
@@ -177,10 +182,11 @@ export const blogPosts: BlogPostMeta[] = [
   `
   },
   {
-    slug: 'nottingham-forest-vs-aston-villa-live-30-04-2026-europa-league',
+    slug: 'nottingham-forest-vs-aston-villa-live-europa-league',
     title: 'Nottingham Forest vs Aston Villa Live 30-04-2026 | Time, Channel & Europa League Semi-Final',
     excerpt: 'Check match time, TV channel, venue and how to watch Nottingham Forest vs Aston Villa live in the Europa League semi-final 2026.',
     date: 'April 29, 2026',
+    isoDate: '2026-04-29',
     category: 'Sports',
     image: 'https://i.ytimg.com/vi/7pNhhBKPuAc/maxresdefault.jpg',
     content: `
@@ -232,10 +238,11 @@ export const blogPosts: BlogPostMeta[] = [
   `
   },
   {
-    slug: 'esperance-vs-sfaxien-live-match-30-04-2026-tunisia',
-    title: 'Esperance vs Sfaxien Live Match Today 30-04-2026 | Time, Channels & Live Stream',
+    slug: 'esperance-vs-sfaxien-live-match-tunisia',
+    title: 'Esperance vs Sfaxien Live Match Today | Time, Channels & Live Stream',
     excerpt: 'Find out the match time, date, venue and how to watch Esperance vs Sfaxien live in the Tunisian League 2026.',
     date: 'April 29, 2026',
+    isoDate: '2026-04-29',
     category: 'Sports',
     image: 'https://i.ytimg.com/vi/Vg-_CSPTspI/maxresdefault.jpg',
     content: `
@@ -291,7 +298,8 @@ export const blogPosts: BlogPostMeta[] = [
     title: 'How to download Snapchat videos and make money online (2026 guide)',
     excerpt: 'Learn how to save Snapchat videos safely and discover proven ways to monetize Snapchat content in 2026.',
     date: 'April 29, 2026',
-    category: 'Guides',
+    isoDate: '2026-04-29',
+    category: 'Social Media Download Guides',
     image: 'https://media.ouest-france.fr/v1/pictures/MjAxNzExNmIzMDU1NWM0MmEyMWM2MjE3ZTc4OTQ4Mzc0MWQyMzM?width=630&height=354&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=8886486e09174316a8eff3fcc830ccaf2783492d5b2b20fb953418db125f69b2',
     content: `
     <h2>Download Snapchat Videos and Turn Them Into Income</h2>
@@ -358,6 +366,7 @@ export const blogPosts: BlogPostMeta[] = [
     title: 'Best way to download TikTok without watermark',
     excerpt: 'Learn the easiest and most reliable method to save TikTok videos cleanly without any watermarks or logos.',
     date: 'April 20, 2026',
+    isoDate: '2026-04-20',
     category: 'Tips',
     image: 'https://images.unsplash.com/photo-1611605698335-8b1569810432?w=800&q=80',
     content: `
@@ -378,10 +387,11 @@ export const blogPosts: BlogPostMeta[] = [
   },
   {
     slug: 'instagram-reels-download-guide',
-    title: 'The Ultimate Guide to Saving Instagram Reels',
+    title: 'The Ultimate Guide to Download Instagram Reels 2026 for Free',
     excerpt: 'Learn how to download Instagram Reels and IGTV videos directly to your device.',
     date: 'April 15, 2026',
-    category: 'Guides',
+    isoDate: '2026-04-15',
+    category: 'Social Media Download Guides',
     image: 'https://images.unsplash.com/photo-1611262588024-d12430b98920?w=800&q=80',
     content: `
       <h2>Instagram Reels are Everywhere</h2>
@@ -390,6 +400,73 @@ export const blogPosts: BlogPostMeta[] = [
       <h3>How to do it</h3>
       <p>Tap the three dots on any Instagram Reel, copy the link, and bring it over to our downloader. You'll get the MP4 file in seconds.</p>
     `
+  },
+  {
+    slug: 'premier-league-champions-league-live-football-updates-2026',
+    title: 'Premier League & Champions League: Fixtures, Results, Highlights & Live Football Coverage',
+    excerpt: 'Follow Premier League and Champions League action with live match updates, highlights, and watch catch-up links for every football game.',
+    date: 'May 2, 2026',
+    isoDate: '2026-05-02',
+    category: 'Sports',
+    image: 'https://i.ytimg.com/vi/1EXSUX6d7ic/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLCk-iDdrh-EtxB7gljiizNx_FpICA',
+    content: `
+    <h2>Premier League: High-Intensity Football Every Weekend</h2>
+    <p>
+      The <strong>Premier League</strong> is the most competitive domestic league in world football.
+      Every <strong>football match</strong> delivers intensity, tactics, and unpredictable results.
+      Clubs like Arsenal, Manchester City, Liverpool, and Manchester United compete weekly for the title race.
+    </p>
+
+    <h3>Premier League Live Matches & Today Match Updates</h3>
+    <p>
+      Fans following <strong>football today</strong> can track every <strong>today match</strong> in real time:
+      goals, assists, cards, and full match statistics.
+      The <strong>match today</strong> fixtures often impact standings, European qualification, and relegation battles.
+    </p>
+
+    <h2>Champions League: Europe’s Elite Competition</h2>
+    <p>
+      The <strong>UEFA Champions League</strong> brings the best clubs in Europe together in knockout and group-stage battles.
+      Teams like Real Madrid, Bayern Munich, PSG, and Manchester City fight for the most prestigious trophy in club football.
+    </p>
+
+    <h3>Champions League Today Football Live</h3>
+    <p>
+      Every <strong>today football live</strong> Champions League night delivers high drama and elite performances.
+      Fans follow each <strong>football match</strong> for goals, tactical battles, and decisive moments that define the tournament.
+    </p>
+
+    <h2>Live Streaming Football & Match Catch-Up</h2>
+    <p>
+      If you want to watch games live, <strong>live streaming football</strong> platforms provide real-time coverage of both Premier League and Champions League matches.
+      If you missed the action, you can still catch up with full match replays and highlights.
+    </p>
+    <p style="text-align:center; margin-top:20px;">
+      <a href="https://mediagrabber.org/blog" target="_blank" style="background:#e60023;color:#fff;padding:14px 24px;text-decoration:none;border-radius:10px;font-weight:bold;font-size:16px;">
+        🔴 Watch live or replay matches here:
+      </a>
+    </p>
+    
+
+    <h2>Football BBC & Match Analysis</h2>
+    <p>
+      The <strong>football BBC</strong> coverage includes expert analysis, post-match breakdowns, and highlight packages
+      for major Premier League and Champions League fixtures.
+    </p>
+
+    <h2>Charity Match & Special Events</h2>
+    <p>
+      Alongside official competitions, <strong>charity match</strong> events bring legends and active players together
+      for entertainment and social impact while keeping fans engaged.
+    </p>
+
+    <h2>Conclusion</h2>
+    <p>
+      From the Premier League to the Champions League, football delivers nonstop excitement.
+      Whether you follow a <strong>today match</strong>, check <strong>football today</strong>, or watch via
+      <strong>live streaming football</strong>, every game brings unforgettable moments.
+    </p>
+  `
   }
 ];
 

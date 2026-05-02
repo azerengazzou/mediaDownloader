@@ -1,14 +1,16 @@
 import { useParams, Link, Navigate } from 'react-router-dom';
 import { useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 import { SEO } from '../components/SEO';
-import { getPostBySlug } from '../data/blog';
+import { useLocalizedBlogPost } from '../data/blogI18n';
 import { Calendar, ArrowLeft, Download } from 'lucide-react';
-import { AdBlock } from '../components/layout/AdBlock';
+import { AdsterraNativeBanner } from '../components/layout/AdBlock';
 import { useAnalytics } from '../hooks/useAnalytics';
 
 export function BlogPost() {
   const { slug } = useParams<{ slug: string }>();
-  const post = slug ? getPostBySlug(slug) : undefined;
+  const { t } = useTranslation();
+  const post = useLocalizedBlogPost(slug ?? '');
   const { trackBlogRead } = useAnalytics();
 
   useEffect(() => {
@@ -19,12 +21,15 @@ export function BlogPost() {
     return <Navigate to="/blog" replace />;
   }
 
+  const rawDate = new Date(post.isoDate ?? post.date);
+  const datePublished = isNaN(rawDate.getTime()) ? new Date().toISOString() : rawDate.toISOString();
+
   const articleSchema = {
     "@context": "https://schema.org",
     "@type": "Article",
     "headline": post.title,
     "image": post.image,
-    "datePublished": new Date(post.date).toISOString(),
+    "datePublished": datePublished,
     "author": {
       "@type": "Organization",
       "name": "MediaGrabber"
@@ -33,17 +38,17 @@ export function BlogPost() {
 
   return (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-      <SEO 
-        title={post.title} 
+      <SEO
+        title={post.title}
         description={post.excerpt}
         schema={articleSchema}
       />
-      
-      <Link 
-        to="/blog" 
+
+      <Link
+        to="/blog"
         className="inline-flex items-center gap-2 text-gray-500 hover:text-brand-600 dark:text-gray-400 dark:hover:text-brand-400 transition-colors mb-8 font-medium"
       >
-        <ArrowLeft className="w-4 h-4" /> Back to Blog
+        <ArrowLeft className="w-4 h-4" /> {t('blog.backToBlog')}
       </Link>
 
       <article>
@@ -60,40 +65,40 @@ export function BlogPost() {
               <span>{post.date}</span>
             </div>
             <span>•</span>
-            <span>By MediaGrabber Team</span>
+            <span>{t('blog.byAuthor', 'By MediaGrabber Team')}</span>
           </div>
         </header>
 
-        <img 
-          src={post.image} 
-          alt={post.title} 
+        <img
+          src={post.image}
+          alt={post.title}
           className="w-full h-[400px] object-cover rounded-3xl mb-12 shadow-lg"
         />
 
         <div className="flex flex-col lg:flex-row gap-12">
-          <div 
+          <div
             className="flex-1 prose dark:prose-invert prose-lg max-w-none prose-headings:font-heading prose-a:text-brand-600 dark:prose-a:text-brand-400"
             dangerouslySetInnerHTML={{ __html: post.content }}
           />
-          
+
           <aside className="w-full lg:w-72 flex-shrink-0 space-y-8">
-            <AdBlock format="rectangle" />
-            
+            <AdsterraNativeBanner />
+
             <div className="bg-brand-50 dark:bg-gray-900 border border-brand-100 dark:border-gray-800 rounded-2xl p-6 text-center">
               <div className="w-12 h-12 bg-brand-500 rounded-xl flex items-center justify-center mx-auto mb-4">
                 <Download className="w-6 h-6 text-white" />
               </div>
               <h3 className="font-heading font-bold text-lg mb-2 text-gray-900 dark:text-white">
-                Ready to download?
+                {t('blog.ctaTitle', 'Ready to download?')}
               </h3>
               <p className="text-sm text-gray-600 dark:text-gray-400 mb-6">
-                Try MediaGrabber now and download your favorite videos for free.
+                {t('blog.ctaDescription', 'Try MediaGrabber now and download your favorite videos for free.')}
               </p>
-              <Link 
-                to="/" 
+              <Link
+                to="/"
                 className="block w-full bg-brand-500 hover:bg-brand-600 text-white font-medium py-3 px-4 rounded-xl transition-colors"
               >
-                Go to Downloader
+                {t('blog.goToDownloader', 'Go to Downloader')}
               </Link>
             </div>
           </aside>

@@ -2,7 +2,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { AlertCircle, ArrowRight, Loader2, Search } from 'lucide-react';
 import { SEO } from '../components/SEO';
-import { AdBlock } from '../components/layout/AdBlock';
+import { AdsterraNativeBanner } from '../components/layout/AdBlock';
 import { detectPlatform } from '../lib/platforms';
 import { useAnalytics } from '../hooks/useAnalytics';
 
@@ -72,7 +72,7 @@ export function UnsupportedUrl() {
 
           {/* Ad */}
           <div className="mb-10">
-            <AdBlock format="leaderboard" />
+            <AdsterraNativeBanner />
           </div>
 
           {/* Retry Input */}
