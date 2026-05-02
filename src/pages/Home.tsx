@@ -12,14 +12,14 @@ import { useLocalizedBlogPosts } from '../data/blogI18n';
 import { ArrowRight, BookOpen } from 'lucide-react';
 
 const STREAMS = [
-  { id: 'bein1', label: 'فياريال - ليفانتي', src: 'https://6.wwwkora.com/albaplayer/bein-sports-hd-1/?serv=0' },
-  { id: 'bein2', label: 'فالنسيا - أتلتيكو مدريد', src: 'https://dns22.yalla-sport.link/chtv/ch3.php' },
-  { id: 'bein3', label: 'بايرن ميونخ - هايدنهايم ', src: 'https://5.wwwkora.com/albaplayer/bein-sports-hd-7/' },
-  { id: 'bein4', label: ' - أولمبيك مرسيليا- نانت', src: 'https://5.wwwkora.com/albaplayer/bein-sports-hd-6/' },
-  { id: 'bein5', label: 'نيوكاسل ـ برايتون ', src: 'https://5.wwwkora.com/albaplayer/bein-sports-hd-4/' },
-  { id: 'bein6', label: 'بريتفورد ـ وست هام', src: 'https://5.wwwkora.com/albaplayer/bein-sports-hd-1/' },
-  { id: 'beinmax', label: 'فالنسيا ـ اتلتيكو مدريد', src: 'https://11.yallashoot1.cc/albaplayer/bein-2/?serv=0' },
-  { id: 'aljazeera', label: 'پاريس سان جيرمان ـ لوريان ', src: 'https://11.yallashoot1.cc/albaplayer/bein-2/?serv=0' }
+  { id: 'bein1',     label: 'فياريال - ليفانتي',           labelEn: 'Villarreal vs Levante',              labelFr: 'Villarreal - Levante',              src: 'https://6.wwwkora.com/albaplayer/bein-sports-hd-1/?serv=0' },
+  { id: 'bein2',     label: 'فالنسيا - أتلتيكو مدريد',     labelEn: 'Valencia vs Atletico Madrid',         labelFr: 'Valence - Atlético Madrid',         src: 'https://dns22.yalla-sport.link/chtv/ch3.php' },
+  { id: 'bein3',     label: 'بايرن ميونخ - هايدنهايم',     labelEn: 'Bayern Munich vs Heidenheim',         labelFr: 'Bayern Munich - Heidenheim',        src: 'https://5.wwwkora.com/albaplayer/bein-sports-hd-7/' },
+  { id: 'bein4',     label: 'أولمبيك مرسيليا - نانت',      labelEn: 'Olympique Marseille vs Nantes',       labelFr: 'Olympique de Marseille - Nantes',   src: 'https://5.wwwkora.com/albaplayer/bein-sports-hd-6/' },
+  { id: 'bein5',     label: 'نيوكاسل - برايتون',           labelEn: 'Newcastle vs Brighton',              labelFr: 'Newcastle - Brighton',              src: 'https://5.wwwkora.com/albaplayer/bein-sports-hd-4/' },
+  { id: 'bein6',     label: 'بريتفورد - وست هام',          labelEn: 'Brentford vs West Ham',              labelFr: 'Brentford - West Ham',              src: 'https://5.wwwkora.com/albaplayer/bein-sports-hd-1/' },
+  { id: 'beinmax',   label: 'فالنسيا - أتلتيكو مدريد',    labelEn: 'Valencia vs Atletico Madrid',         labelFr: 'Valence - Atlético Madrid',         src: 'https://11.yallashoot1.cc/albaplayer/bein-2/?serv=0' },
+  { id: 'aljazeera', label: 'باريس سان جيرمان - لوريان',  labelEn: 'Paris Saint-Germain vs Lorient',      labelFr: 'Paris Saint-Germain - Lorient',     src: 'https://11.yallashoot1.cc/albaplayer/bein-2/?serv=0' },
 ];
 
 function LiveStreamTabs() {
@@ -51,7 +51,7 @@ function LiveStreamTabs() {
       <div
         id={`panel-${current.id}`}
         role="tabpanel"
-        aria-label={`${current.label} live stream`}
+        aria-label={`${current.labelEn} live stream`}
         className="w-full rounded-2xl overflow-hidden shadow-lg border border-gray-200 dark:border-gray-700"
       >
         <iframe
@@ -62,14 +62,35 @@ function LiveStreamTabs() {
           frameBorder="0"
           scrolling="yes"
           allowFullScreen
-          title={`${current.label} — Live Football Stream`}
+          title={`${current.labelEn} — Live Football Stream • ${current.label} • ${current.labelFr}`}
           loading="lazy"
         />
       </div>
 
-      <p className="mt-3 text-xs text-center text-gray-400 dark:text-gray-500">
-        {current.label} — Live Football Stream • بث مباشر
-      </p>
+      {/* Trilingual match label — visible + indexed by crawlers */}
+      <div className="mt-4 text-center space-y-1">
+        <p className="text-sm font-semibold text-gray-700 dark:text-gray-300">{current.labelEn} — Live Stream Free</p>
+        <p className="text-sm text-gray-500 dark:text-gray-400">{current.label} • بث مباشر مجاني</p>
+        <p className="text-xs text-gray-400 dark:text-gray-500">{current.labelFr} — Streaming en direct gratuit</p>
+      </div>
+
+      {/* SEO block — all matches in 3 languages, crawlable */}
+      <div className="mt-8 p-4 rounded-2xl bg-gray-50 dark:bg-gray-800 border border-gray-100 dark:border-gray-700 text-xs text-gray-500 dark:text-gray-400 leading-6">
+        <p className="font-semibold text-gray-600 dark:text-gray-300 mb-2">Today's Live Football Matches • مباريات اليوم مباشرة • Matchs en direct aujourd'hui</p>
+        <ul className="space-y-1">
+          {STREAMS.map((s) => (
+            <li key={s.id}>
+              <span className="text-gray-700 dark:text-gray-300 font-medium">{s.labelEn}</span>
+              {' • '}
+              <span>{s.label}</span>
+              {' • '}
+              <span>{s.labelFr}</span>
+              {' — '}
+              <span className="text-brand-500">live stream free • بث مباشر مجاني • streaming gratuit</span>
+            </li>
+          ))}
+        </ul>
+      </div>
     </div>
   );
 }
