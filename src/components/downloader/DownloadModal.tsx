@@ -1,8 +1,8 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { X, Download, Shield, Zap, Star } from 'lucide-react';
 import { DownloadOption, DownloadResult } from '../../hooks/useDownloader';
-import { AdBlock } from '../layout/AdBlock';
 import { cn } from '../../lib/utils';
+import { AdsterraNativeBanner } from '../layout/AdBlock';
 
 interface DownloadModalProps {
   result: DownloadResult;
@@ -188,7 +188,7 @@ export function DownloadModal({ result, option, onClose }: DownloadModalProps) {
 
         {/* Ad slot — shown while user waits */}
         <div className="px-6 pb-4">
-          <AdBlock format="rectangle" className="max-w-full h-[120px]" />
+          <AdsterraNativeBanner />
         </div>
 
         {/* SEO Content — rich, indexed, useful to user */}

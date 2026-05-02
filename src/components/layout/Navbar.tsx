@@ -1,30 +1,50 @@
 import React from 'react';
-import { Link, useParams } from 'react-router-dom';
-import { Download, Moon, Sun, Menu, X } from 'lucide-react';
+import { Link, useParams, useLocation } from 'react-router-dom';
+import { Download, Moon, Sun, Menu, X, ChevronDown } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { useDarkMode } from '../../hooks/useDarkMode';
 import { useAnalytics } from '../../hooks/useAnalytics';
 import { LanguageSwitcher } from '../LanguageSwitcher';
 import { getCurrentLanguage } from '../../config/i18n';
+import { useBlogCategories } from '../../data/blogI18n';
 
 export function Navbar() {
   const { isDark, toggle } = useDarkMode();
   const { trackNavClick } = useAnalytics();
   const { t } = useTranslation();
   const { lang } = useParams<{ lang?: string }>();
+  const location = useLocation();
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+  const [isBlogOpen, setIsBlogOpen] = React.useState(false);
+  const dropdownRef = React.useRef<HTMLDivElement>(null);
 
-  // Get the current language from URL or use default
+  const categories = useBlogCategories();
   const currentLang = lang || getCurrentLanguage();
   const langPrefix = `/${currentLang}`;
 
   const navLinks = [
     { name: t('nav.platforms'), path: `${langPrefix}/platforms` },
     { name: t('nav.faq'), path: `${langPrefix}/faq` },
-    { name: t('nav.blog'), path: `${langPrefix}/blog` },
   ];
 
   const homePath = currentLang ? `/${currentLang}` : '/';
+
+  // Close dropdown on outside click
+  React.useEffect(() => {
+    function handleClickOutside(e: MouseEvent) {
+      if (dropdownRef.current && !dropdownRef.current.contains(e.target as Node)) {
+        setIsBlogOpen(false);
+      }
+    }
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
+
+  // Close dropdown on route change
+  React.useEffect(() => {
+    setIsBlogOpen(false);
+    setIsMenuOpen(false);
+  }, [location.pathname]);
 
   return (
     <nav className="sticky top-0 z-50 w-full glass border-b">
@@ -54,6 +74,41 @@ export function Navbar() {
                   {link.name}
                 </Link>
               ))}
+
+              {/* Blog dropdown */}
+              <div className="relative" ref={dropdownRef}>
+                <button
+                  onClick={() => setIsBlogOpen(v => !v)}
+                  className="flex items-center gap-1 text-sm font-medium text-gray-600 hover:text-brand-600 dark:text-gray-300 dark:hover:text-brand-400 transition-colors"
+                  aria-haspopup="true"
+                  aria-expanded={isBlogOpen}
+                >
+                  {t('nav.blog')}
+                  <ChevronDown className={`w-4 h-4 transition-transform ${isBlogOpen ? 'rotate-180' : ''}`} />
+                </button>
+
+                {isBlogOpen && (
+                  <div className="absolute top-full left-0 mt-2 w-48 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-2xl shadow-xl overflow-hidden z-50">
+                    <Link
+                      to={`${langPrefix}/blog`}
+                      onClick={() => trackNavClick('Blog')}
+                      className="block px-4 py-2.5 text-sm font-semibold text-gray-700 dark:text-gray-200 hover:bg-brand-50 dark:hover:bg-gray-800 hover:text-brand-600 dark:hover:text-brand-400 transition-colors border-b border-gray-100 dark:border-gray-800"
+                    >
+                      {t('blog.allPosts', 'All Posts')}
+                    </Link>
+                    {categories.map((cat) => (
+                      <Link
+                        key={cat}
+                        to={`${langPrefix}/blog/category/${encodeURIComponent(cat)}`}
+                        onClick={() => trackNavClick(`Blog:${cat}`)}
+                        className="block px-4 py-2.5 text-sm text-gray-600 dark:text-gray-300 hover:bg-brand-50 dark:hover:bg-gray-800 hover:text-brand-600 dark:hover:text-brand-400 transition-colors"
+                      >
+                        {cat}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
             </div>
 
             <div className="flex items-center gap-4 border-l border-gray-200 dark:border-gray-700 pl-4">
@@ -101,6 +156,29 @@ export function Navbar() {
                 {link.name}
               </Link>
             ))}
+
+            {/* Mobile Blog section */}
+            <div className="px-3 py-2">
+              <Link
+                to={`${langPrefix}/blog`}
+                onClick={() => setIsMenuOpen(false)}
+                className="block text-base font-semibold text-gray-700 dark:text-gray-200 hover:text-brand-600 dark:hover:text-brand-400 mb-2"
+              >
+                {t('nav.blog')}
+              </Link>
+              <div className="pl-3 space-y-1 border-l-2 border-brand-200 dark:border-brand-800">
+                {categories.map((cat) => (
+                  <Link
+                    key={cat}
+                    to={`${langPrefix}/blog/category/${encodeURIComponent(cat)}`}
+                    onClick={() => setIsMenuOpen(false)}
+                    className="block py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-brand-600 dark:hover:text-brand-400 transition-colors"
+                  >
+                    {cat}
+                  </Link>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       )}

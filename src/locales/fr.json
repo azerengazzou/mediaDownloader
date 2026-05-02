@@ -94,7 +94,21 @@
         "published": "Publié",
         "author": "Auteur",
         "noArticles": "Aucun article trouvé",
-        "backToBlog": "Retour au Blog"
+        "backToBlog": "Retour au Blog",
+        "allPosts": "Tous les articles",
+        "article": "article",
+        "articles": "articles",
+        "guidesCategoryTitle": "Guides de téléchargement sur les réseaux sociaux",
+        "guidesCategoryDesc": "Guides étape par étape pour télécharger des vidéos depuis YouTube, TikTok, Instagram, Snapchat et plus — gratuitement, rapidement et sans filigranes.",
+        "browseCategory": "Parcourir tous les",
+        "articlesOn": "articles sur MediaGrabber",
+        "latestArticles": "Derniers articles du blog",
+        "viewAllArticles": "Voir tous les articles",
+        "listSubtitle": "Astuces, conseils et guides pour tirer le meilleur parti des téléchargements sur les réseaux sociaux.",
+        "byAuthor": "Par l'équipe MediaGrabber",
+        "ctaTitle": "Prêt à télécharger ?",
+        "ctaDescription": "Essayez MediaGrabber maintenant et téléchargez vos vidéos préférées gratuitement.",
+        "goToDownloader": "Aller au téléchargeur"
     },
     "static": {
         "terms": "Conditions de Service",

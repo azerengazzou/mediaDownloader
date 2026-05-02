@@ -94,7 +94,21 @@
         "published": "نُشر في",
         "author": "المؤلف",
         "noArticles": "لم يتم العثور على أي مقالات",
-        "backToBlog": "العودة إلى المدونة"
+        "backToBlog": "العودة إلى المدونة",
+        "allPosts": "جميع المقالات",
+        "article": "مقال",
+        "articles": "مقالات",
+        "guidesCategoryTitle": "أدلة تحميل وسائل التواصل الاجتماعي",
+        "guidesCategoryDesc": "أدلة خطوة بخطوة لتنزيل مقاطع الفيديو من يوتيوب وتيك توك وإنستغرام وسناب شات وغيرها — مجانًا وبسرعة وبدون علامات مائية.",
+        "browseCategory": "تصفح جميع",
+        "articlesOn": "مقالات على MediaGrabber",
+        "latestArticles": "آخر مقالات المدونة",
+        "viewAllArticles": "عرض جميع المقالات",
+        "listSubtitle": "نصائح وحيل وأدلة للاستفادة القصوى من تنزيلات وسائل التواصل الاجتماعي.",
+        "byAuthor": "بواسطة فريق MediaGrabber",
+        "ctaTitle": "هل أنت مستعد للتنزيل؟",
+        "ctaDescription": "جرب MediaGrabber الآن وحمّل مقاطع الفيديو المفضلة لديك مجانًا.",
+        "goToDownloader": "انتقل إلى أداة التنزيل"
     },
     "static": {
         "terms": "شروط الخدمة",
