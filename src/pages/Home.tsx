@@ -12,14 +12,14 @@ import { useLocalizedBlogPosts } from '../data/blogI18n';
 import { ArrowRight, BookOpen } from 'lucide-react';
 
 const STREAMS = [
-  { id: 'bein1',     label: 'فياريال - ليفانتي',           labelEn: 'Villarreal vs Levante',              labelFr: 'Villarreal - Levante',              src: 'https://6.wwwkora.com/albaplayer/bein-sports-hd-1/?serv=0' },
-  { id: 'bein2',     label: 'فالنسيا - أتلتيكو مدريد',     labelEn: 'Valencia vs Atletico Madrid',         labelFr: 'Valence - Atlético Madrid',         src: 'https://dns22.yalla-sport.link/chtv/ch3.php' },
-  { id: 'bein3',     label: 'بايرن ميونخ - هايدنهايم',     labelEn: 'Bayern Munich vs Heidenheim',         labelFr: 'Bayern Munich - Heidenheim',        src: 'https://5.wwwkora.com/albaplayer/bein-sports-hd-7/' },
-  { id: 'bein4',     label: 'أولمبيك مرسيليا - نانت',      labelEn: 'Olympique Marseille vs Nantes',       labelFr: 'Olympique de Marseille - Nantes',   src: 'https://5.wwwkora.com/albaplayer/bein-sports-hd-6/' },
-  { id: 'bein5',     label: 'نيوكاسل - برايتون',           labelEn: 'Newcastle vs Brighton',              labelFr: 'Newcastle - Brighton',              src: 'https://5.wwwkora.com/albaplayer/bein-sports-hd-4/' },
-  { id: 'bein6',     label: 'بريتفورد - وست هام',          labelEn: 'Brentford vs West Ham',              labelFr: 'Brentford - West Ham',              src: 'https://5.wwwkora.com/albaplayer/bein-sports-hd-1/' },
-  { id: 'beinmax',   label: 'فالنسيا - أتلتيكو مدريد',    labelEn: 'Valencia vs Atletico Madrid',         labelFr: 'Valence - Atlético Madrid',         src: 'https://11.yallashoot1.cc/albaplayer/bein-2/?serv=0' },
-  { id: 'aljazeera', label: 'باريس سان جيرمان - لوريان',  labelEn: 'Paris Saint-Germain vs Lorient',      labelFr: 'Paris Saint-Germain - Lorient',     src: 'https://11.yallashoot1.cc/albaplayer/bein-2/?serv=0' },
+  { id: 'bein1', label: 'برشلونة  - أوساسونا ', labelEn: 'barcelona vs osasuna', labelFr: 'Villarreal - Levante', src: 'https://5.wwwkora.com/albaplayer/bein-sports-hd-1/' },
+  { id: 'bein2', label: 'برشلونة  - أوساسونا ', labelEn: 'barcelona vs osasuna', labelFr: 'Valence - Atlético Madrid', src: 'https://5.wwwkora.com/albaplayer/bein-sports-hd-1/' },
+  { id: 'bein3', label: 'برشلونة  - أوساسونا ', labelEn: 'barcelona vs osasuna', labelFr: 'Bayern Munich - Heidenheim', src: 'https://5.wwwkora.com/albaplayer/bein-sports-hd-1/' },
+  { id: 'bein4', label: 'برشلونة  - أوساسونا ', labelEn: 'barcelona vs osasuna', labelFr: 'Olympique de Marseille - Nantes', src: 'https://5.wwwkora.com/albaplayer/bein-sports-hd-1/' },
+  { id: 'bein5', label: 'برشلونة  - أوساسونا ', labelEn: 'barcelona vs osasuna', labelFr: 'Newcastle - Brighton', src: 'https://5.wwwkora.com/albaplayer/bein-sports-hd-1/' },
+  { id: 'bein6', label: 'برشلونة  - أوساسونا ', labelEn: 'barcelona vs osasuna', labelFr: 'Brentford - West Ham', src: 'https://5.wwwkora.com/albaplayer/bein-sports-hd-1/' },
+  { id: 'beinmax', label: 'برشلونة  - أوساسونا ', labelEn: 'barcelona vs osasuna', labelFr: 'Valence - Atlético Madrid', src: 'https://5.wwwkora.com/albaplayer/bein-sports-hd-1/' },
+  { id: 'aljazeera', label: 'برشلونة  - أوساسونا ', labelEn: 'barcelona vs osasuna', labelFr: 'Paris Saint-Germain - Lorient', src: 'https://5.wwwkora.com/albaplayer/bein-sports-hd-1/' },
 ];
 
 function LiveStreamTabs() {
