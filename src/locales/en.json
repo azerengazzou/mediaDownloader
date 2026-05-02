@@ -12,7 +12,8 @@
         "terms": "Terms",
         "privacy": "Privacy Policy",
         "contact": "Contact",
-        "language": "Language"
+        "language": "Language",
+        "chat": "Chat with Dalida 💬"
     },
     "hero": {
         "title": "Download Any Video",
@@ -125,5 +126,20 @@
         "online": "Online",
         "fast": "Fast",
         "secure": "Secure"
+    },
+    "chat": {
+        "seoTitle": "Chat with Dalida 💬 — Live Community Chat | MediaGrabber",
+        "seoDescription": "Chat with Dalida and the MediaGrabber community! Discuss football matches, video downloads, social media tips and more — no login required.",
+        "title": "Chat with Dalida! 👋",
+        "subtitle": "Say hi to Dalida and the community — no login required. Chat about football, downloads, and more.",
+        "liveNow": "Live Now",
+        "communityChat": "Community Chat",
+        "online": "online",
+        "youAre": "You are chatting as",
+        "you": "You",
+        "inputPlaceholder": "Type a message...",
+        "send": "Send",
+        "seoBlockTitle": "What is MediaGrabber Community Chat?",
+        "seoBlockText": "MediaGrabber Community Chat is a free, no-login live chat where users discuss football live streams, video downloading tips, social media content, and more. Chat in real time with people from around the world."
     }
 }

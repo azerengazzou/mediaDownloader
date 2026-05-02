@@ -12,7 +12,8 @@
         "terms": "Conditions",
         "privacy": "Politique de Confidentialité",
         "contact": "Contact",
-        "language": "Langue"
+        "language": "Langue",
+        "chat": "Chatter avec Dalida 💬"
     },
     "hero": {
         "title": "Téléchargez N'importe Quelle Vidéo",
@@ -125,5 +126,20 @@
         "online": "En Ligne",
         "fast": "Rapide",
         "secure": "Sécurisé"
+    },
+    "chat": {
+        "seoTitle": "Chatter avec Dalida 💬 — Chat Communautaire en Direct | MediaGrabber",
+        "seoDescription": "Chattez avec Dalida et la communauté MediaGrabber ! Discutez de matchs de football, téléchargements vidéo, réseaux sociaux et plus — sans inscription.",
+        "title": "Chattez avec Dalida ! 👋",
+        "subtitle": "Dites bonjour à Dalida et à la communauté — sans inscription. Discutez de football, téléchargements et plus.",
+        "liveNow": "En Direct",
+        "communityChat": "Chat Communautaire",
+        "online": "en ligne",
+        "youAre": "Vous chattez en tant que",
+        "you": "Vous",
+        "inputPlaceholder": "Tapez un message...",
+        "send": "Envoyer",
+        "seoBlockTitle": "Qu'est-ce que le Chat Communautaire MediaGrabber?",
+        "seoBlockText": "Le Chat Communautaire MediaGrabber est un chat en direct gratuit sans inscription où les utilisateurs discutent de streams football, téléchargements vidéo, contenu réseaux sociaux et plus. Chattez en temps réel avec des personnes du monde entier."
     }
 }

@@ -12,6 +12,7 @@ import { BlogPost } from './pages/BlogPost';
 import { BlogCategory } from './pages/BlogCategory';
 import { UnsupportedUrl } from './pages/UnsupportedUrl';
 import { DownloadAiVideoMp3 } from './pages/DownloadAiVideoMp3';
+import { LiveChat } from './pages/LiveChat';
 import { useAnalytics } from './hooks/useAnalytics';
 import { changeLanguage, getCurrentLanguage, getLanguageDirection } from './config/i18n';
 
@@ -63,6 +64,7 @@ const sharedRoutes = (
     <Route path="unsupported-url" element={<UnsupportedUrl />} />
     <Route path="convertisseur-video" element={<UnsupportedUrl />} />
     <Route path="download-ai-video-mp3" element={<DownloadAiVideoMp3 />} />
+    <Route path="chat-direct-with-girl" element={<LiveChat />} />
   </>
 );
 
