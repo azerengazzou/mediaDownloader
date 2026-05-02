@@ -230,7 +230,7 @@ export function Home() {
       <section className="w-full bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800 py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl font-bold font-heading text-gray-900 dark:text-white mb-6 text-center">
-            Live Sports Stream
+            Live Sports Stream - قناة بي إن سبورت 6 – beIN Sports 6 – بث مباشر مباريات اليوم مجانا
           </h2>
           <div className="w-full rounded-2xl overflow-hidden shadow-lg border border-gray-200 dark:border-gray-700">
             <iframe
