@@ -12,14 +12,14 @@ import { useLocalizedBlogPosts } from '../data/blogI18n';
 import { ArrowRight, BookOpen } from 'lucide-react';
 
 const STREAMS = [
-  { id: 'bein1', label: 'برشلونة  - أوساسونا ', labelEn: 'barcelona vs osasuna', labelFr: 'Villarreal - Levante', src: 'https://5.wwwkora.com/albaplayer/bein-sports-hd-1/' },
-  { id: 'bein2', label: 'برشلونة  - أوساسونا ', labelEn: 'barcelona vs osasuna', labelFr: 'Valence - Atlético Madrid', src: 'https://5.wwwkora.com/albaplayer/bein-sports-hd-1/' },
-  { id: 'bein3', label: 'برشلونة  - أوساسونا ', labelEn: 'barcelona vs osasuna', labelFr: 'Bayern Munich - Heidenheim', src: 'https://5.wwwkora.com/albaplayer/bein-sports-hd-1/' },
-  { id: 'bein4', label: 'برشلونة  - أوساسونا ', labelEn: 'barcelona vs osasuna', labelFr: 'Olympique de Marseille - Nantes', src: 'https://5.wwwkora.com/albaplayer/bein-sports-hd-1/' },
-  { id: 'bein5', label: 'برشلونة  - أوساسونا ', labelEn: 'barcelona vs osasuna', labelFr: 'Newcastle - Brighton', src: 'https://5.wwwkora.com/albaplayer/bein-sports-hd-1/' },
-  { id: 'bein6', label: 'برشلونة  - أوساسونا ', labelEn: 'barcelona vs osasuna', labelFr: 'Brentford - West Ham', src: 'https://5.wwwkora.com/albaplayer/bein-sports-hd-1/' },
-  { id: 'beinmax', label: 'برشلونة  - أوساسونا ', labelEn: 'barcelona vs osasuna', labelFr: 'Valence - Atlético Madrid', src: 'https://5.wwwkora.com/albaplayer/bein-sports-hd-1/' },
-  { id: 'aljazeera', label: 'برشلونة  - أوساسونا ', labelEn: 'barcelona vs osasuna', labelFr: 'Paris Saint-Germain - Lorient', src: 'https://5.wwwkora.com/albaplayer/bein-sports-hd-1/' },
+  { id: 'stream1',  label: 'مانشستر يونايتد ضد ليفربول',        labelEn: 'Manchester United vs Liverpool',        labelFr: 'Manchester United vs Liverpool',        src: 'https://5.wwwkora.com/albaplayer/bein-sports-hd-1/' },
+  { id: 'stream2',  label: 'مانشستر يونايتد - ليفربول بث 2',    labelEn: 'Man United vs Liverpool — Stream 2',    labelFr: 'Man United vs Liverpool — Flux 2',      src: 'https://dns22.yalla-sport.link/chtv/ch3.php' },
+  { id: 'stream3',  label: 'مانشستر يونايتد - ليفربول بث 3',    labelEn: 'Man United vs Liverpool — Stream 3',    labelFr: 'Man United vs Liverpool — Flux 3',      src: 'https://5.wwwkora.com/albaplayer/bein-sports-hd-7/' },
+  { id: 'stream4',  label: 'مانشستر يونايتد - ليفربول بث 4',    labelEn: 'Man United vs Liverpool — Stream 4',    labelFr: 'Man United vs Liverpool — Flux 4',      src: 'https://5.wwwkora.com/albaplayer/bein-sports-hd-6/' },
+  { id: 'stream5',  label: 'مانشستر يونايتد - ليفربول بث 5',    labelEn: 'Man United vs Liverpool — Stream 5',    labelFr: 'Man United vs Liverpool — Flux 5',      src: 'https://5.wwwkora.com/albaplayer/bein-sports-hd-4/' },
+  { id: 'stream6',  label: 'مانشستر يونايتد - ليفربول بث 6',    labelEn: 'Man United vs Liverpool — Stream 6',    labelFr: 'Man United vs Liverpool — Flux 6',      src: 'https://5.wwwkora.com/albaplayer/bein-sports-hd-1/' },
+  { id: 'stream7',  label: 'مانشستر يونايتد - ليفربول HD',      labelEn: 'Man United vs Liverpool — HD',          labelFr: 'Man United vs Liverpool — HD',          src: 'https://11.yallashoot1.cc/albaplayer/bein-2/?serv=0' },
+  { id: 'stream8',  label: 'مانشستر يونايتد - ليفربول 4K',      labelEn: 'Man United vs Liverpool — 4K',          labelFr: 'Man United vs Liverpool — 4K',          src: 'https://11.yallashoot1.cc/albaplayer/bein-2/?serv=0' },
 ];
 
 function LiveStreamTabs() {
@@ -76,7 +76,7 @@ function LiveStreamTabs() {
 
       {/* SEO block — all matches in 3 languages, crawlable */}
       <div className="mt-8 p-4 rounded-2xl bg-gray-50 dark:bg-gray-800 border border-gray-100 dark:border-gray-700 text-xs text-gray-500 dark:text-gray-400 leading-6">
-        <p className="font-semibold text-gray-600 dark:text-gray-300 mb-2">Today's Live Football Matches • مباريات اليوم مباشرة • Matchs en direct aujourd'hui</p>
+        <p className="font-semibold text-gray-600 dark:text-gray-300 mb-2">Manchester United vs Liverpool Live Stream Free • مانشستر يونايتد ضد ليفربول بث مباشر • Manchester United vs Liverpool streaming gratuit</p>
         <ul className="space-y-1">
           {STREAMS.map((s) => (
             <li key={s.id}>
@@ -314,7 +314,7 @@ export function Home() {
       <section className="w-full bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800 py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl font-bold font-heading text-gray-900 dark:text-white mb-6 text-center">
-            🔴 Live Football Streams — بث مباشر مباريات اليوم مجانًا
+            🔴 Manchester United vs Liverpool — مانشستر يونايتد ضد ليفربول — Manchester United vs Liverpool en direct
           </h2>
           <LiveStreamTabs />
         </div>
