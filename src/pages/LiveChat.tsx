@@ -237,7 +237,22 @@ export function LiveChat() {
       </div>
 
       <AdsterraNativeBanner />
+{/* Live stream banner */}
+<div className="mb-6 rounded-2xl overflow-hidden shadow-lg border border-gray-200 dark:border-gray-800 bg-black">
+  <div className="px-4 py-2 text-xs font-medium text-white bg-red-600 flex items-center justify-between">
+    <span>🔴 STREAM </span>
+    <span className="animate-pulse">LIVE</span>
+  </div>
 
+  <video
+    src="https://i.makeagif.com/media/12-10-2017/TgxW1Z.mp4"
+    autoPlay
+    loop
+    muted
+    playsInline
+    className="w-full h-auto max-h-[320px] object-cover"
+  />
+</div>
       {/* Chat box */}
       <div className="mt-8 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-3xl overflow-hidden shadow-xl">
 
