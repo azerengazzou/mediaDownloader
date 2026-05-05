@@ -564,7 +564,7 @@ export const blogPosts: BlogPostMeta[] = [
   date: 'May 5, 2026',
   isoDate: '2026-05-05',
   category: 'Celebrity Fashion & Events',
-  image: 'https://images.unsplash.com/photo-1520975958225-1f4a2c1b3c1d?w=800&q=80',
+  image: 'https://www.hollywoodreporter.com/wp-content/uploads/2026/05/Heidi-Klum-Met-Gala-Arrival-Main-2026.jpg?w=1296&h=730&crop=1',
 
   content: `
     <h2>Heidi Klum at Met Gala 2026</h2>
