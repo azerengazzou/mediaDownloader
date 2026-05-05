@@ -1,7 +1,8 @@
 import { ShieldOff, RefreshCw } from 'lucide-react';
 
 export function AdBlockModal() {
-  return (
+  return null;
+ /* return (
     <div
       className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/80 backdrop-blur-sm p-4"
       role="alertdialog"
@@ -65,5 +66,5 @@ export function AdBlockModal() {
         </div>
       </div>
     </div>
-  );
+  );*/
 }
