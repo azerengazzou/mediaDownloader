@@ -25,6 +25,7 @@ export function Navbar() {
   const navLinks = [
     { name: t('nav.platforms'), path: `${langPrefix}/platforms` },
     { name: t('nav.faq'), path: `${langPrefix}/faq` },
+    { name: t('nav.liveStream'), path: `${langPrefix}/live-stream` },
     { name: t('nav.chat'), path: `${langPrefix}/chat-direct-with-girl` },
   ];
 

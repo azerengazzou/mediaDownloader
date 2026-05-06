@@ -13,7 +13,8 @@
         "privacy": "Politique de Confidentialité",
         "contact": "Contact",
         "language": "Langue",
-        "chat": "Chatter avec Dalida 💬"
+        "chat": "Chat en Direct",
+        "liveStream": "Live Stream"
     },
     "hero": {
         "title": "Téléchargez N'importe Quelle Vidéo",
@@ -141,5 +142,14 @@
         "send": "Envoyer",
         "seoBlockTitle": "Qu'est-ce que le Chat Communautaire MediaGrabber?",
         "seoBlockText": "Le Chat Communautaire MediaGrabber est un chat en direct gratuit sans inscription où les utilisateurs discutent de streams football, téléchargements vidéo, contenu réseaux sociaux et plus. Chattez en temps réel avec des personnes du monde entier."
+    },
+    "stream": {
+        "seoTitle": "Manchester United vs Liverpool Live Stream Gratuit | MediaGrabber",
+        "seoDescription": "Regardez le streaming en direct de football et de basketball gratuitement en qualité HD. Suivez les plus grands championnats comme la Premier League, la Ligue des Champions et la NBA avec un accès en temps réel aux matchs, calendriers et scores en direct. Diffusez instantanément sur mobile ou ordinateur avec une lecture fluide, rapide et fiable. Ne manquez plus aucun match grâce à une couverture sportive mise à jour en continu, partout et à tout moment.",
+        "title": "Streaming sportif en direct gratuit | Regardez les matchs de football et de NBA en HD",
+        "liveNow": "En Direct",
+        "mainStream": "Flux Principal",
+        "seoBlockTitle": "Regarder Manchester United vs Liverpool en Streaming Gratuit",
+        "seoBlockText": "Regardez Manchester United vs Liverpool en streaming gratuit en ligne en HD. Plusieurs sources disponibles. Aucune inscription requise — cliquez et regardez."
     }
 }

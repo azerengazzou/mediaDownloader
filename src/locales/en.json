@@ -13,7 +13,8 @@
         "privacy": "Privacy Policy",
         "contact": "Contact",
         "language": "Language",
-        "chat": "Chat with Dalida 💬"
+        "chat": "Live Chat",
+        "liveStream": "Live Stream"
     },
     "hero": {
         "title": "Download Any Video",
@@ -127,10 +128,19 @@
         "fast": "Fast",
         "secure": "Secure"
     },
+    "stream": {
+        "seoTitle": "Manchester United vs Liverpool Live Stream Free | MediaGrabber",
+        "seoDescription": "Watch live football and basketball streaming for free in HD quality. Follow top leagues like the Premier League, Champions League, and NBA with real-time access to matches, schedules, and live scores. Stream instantly on mobile or desktop with smooth, fast, and reliable playback. Never miss a game again with updated live sports coverage anytime, anywhere.",
+        "title": "Live Sports Streaming Free | Watch Football & NBA Matches in HD",
+        "liveNow": "Live Now",
+        "mainStream": "Main Stream",
+        "seoBlockTitle": "Watch Manchester United vs Liverpool Live Stream Free",
+        "seoBlockText": "Watch Manchester United vs Liverpool live stream free online in HD quality. Multiple stream sources available. No registration required — just click and watch."
+    },
     "chat": {
-        "seoTitle": "Chat with Dalida 💬 — Live Community Chat | MediaGrabber",
+        "seoTitle": "Chat with Dalida — Live Community Chat | MediaGrabber",
         "seoDescription": "Chat with Dalida and the MediaGrabber community! Discuss football matches, video downloads, social media tips and more — no login required.",
-        "title": "Chat with Dalida! 👋",
+        "title": "Free Live Chat!",
         "subtitle": "Say hi to Dalida and the community — no login required. Chat about football, downloads, and more.",
         "liveNow": "Live Now",
         "communityChat": "Community Chat",

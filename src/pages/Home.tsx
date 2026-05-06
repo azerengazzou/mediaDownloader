@@ -11,90 +11,6 @@ import { useHistory } from '../hooks/useHistory';
 import { useLocalizedBlogPosts } from '../data/blogI18n';
 import { ArrowRight, BookOpen } from 'lucide-react';
 
-const STREAMS = [
-  { id: 'stream1',  label: 'مانشستر يونايتد ضد ليفربول',        labelEn: 'Manchester United vs Liverpool',        labelFr: 'Manchester United vs Liverpool',        src: 'https://5.wwwkora.com/albaplayer/bein-sports-hd-1/' },
-  { id: 'stream2',  label: 'مانشستر يونايتد - ليفربول بث 2',    labelEn: 'Man United vs Liverpool — Stream 2',    labelFr: 'Man United vs Liverpool — Flux 2',      src: 'https://dns22.yalla-sport.link/chtv/ch3.php' },
-  { id: 'stream3',  label: 'مانشستر يونايتد - ليفربول بث 3',    labelEn: 'Man United vs Liverpool — Stream 3',    labelFr: 'Man United vs Liverpool — Flux 3',      src: 'https://5.wwwkora.com/albaplayer/bein-sports-hd-7/' },
-  { id: 'stream4',  label: 'مانشستر يونايتد - ليفربول بث 4',    labelEn: 'Man United vs Liverpool — Stream 4',    labelFr: 'Man United vs Liverpool — Flux 4',      src: 'https://5.wwwkora.com/albaplayer/bein-sports-hd-6/' },
-  { id: 'stream5',  label: 'مانشستر يونايتد - ليفربول بث 5',    labelEn: 'Man United vs Liverpool — Stream 5',    labelFr: 'Man United vs Liverpool — Flux 5',      src: 'https://5.wwwkora.com/albaplayer/bein-sports-hd-4/' },
-  { id: 'stream6',  label: 'مانشستر يونايتد - ليفربول بث 6',    labelEn: 'Man United vs Liverpool — Stream 6',    labelFr: 'Man United vs Liverpool — Flux 6',      src: 'https://5.wwwkora.com/albaplayer/bein-sports-hd-1/' },
-  { id: 'stream7',  label: 'مانشستر يونايتد - ليفربول HD',      labelEn: 'Man United vs Liverpool — HD',          labelFr: 'Man United vs Liverpool — HD',          src: 'https://11.yallashoot1.cc/albaplayer/bein-2/?serv=0' },
-  { id: 'stream8',  label: 'مانشستر يونايتد - ليفربول 4K',      labelEn: 'Man United vs Liverpool — 4K',          labelFr: 'Man United vs Liverpool — 4K',          src: 'https://11.yallashoot1.cc/albaplayer/bein-2/?serv=0' },
-];
-
-function LiveStreamTabs() {
-  const [active, setActive] = React.useState(STREAMS[1].id);
-  const current = STREAMS.find(s => s.id === active) ?? STREAMS[1];
-
-  return (
-    <div>
-      {/* Tab bar — scrollable on mobile */}
-      <div className="flex gap-2 overflow-x-auto pb-2 mb-4 scrollbar-hide" role="tablist" aria-label="Live football streams">
-        {STREAMS.map((stream) => (
-          <button
-            key={stream.id}
-            role="tab"
-            aria-selected={active === stream.id}
-            aria-controls={`panel-${stream.id}`}
-            onClick={() => setActive(stream.id)}
-            className={`flex-shrink-0 px-4 py-2 rounded-xl text-sm font-semibold transition-all ${active === stream.id
-              ? 'bg-brand-500 text-white shadow-md shadow-brand-500/30'
-              : 'bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:bg-brand-50 dark:hover:bg-gray-700 hover:text-brand-600 dark:hover:text-brand-400'
-              }`}
-          >
-            {stream.label}
-          </button>
-        ))}
-      </div>
-
-      {/* Player */}
-      <div
-        id={`panel-${current.id}`}
-        role="tabpanel"
-        aria-label={`${current.labelEn} live stream`}
-        className="w-full rounded-2xl overflow-hidden shadow-lg border border-gray-200 dark:border-gray-700"
-      >
-        <iframe
-          key={current.src}
-          src={current.src}
-          width="100%"
-          height="500px"
-          frameBorder="0"
-          scrolling="yes"
-          allowFullScreen
-          title={`${current.labelEn} — Live Football Stream • ${current.label} • ${current.labelFr}`}
-          loading="lazy"
-        />
-      </div>
-
-      {/* Trilingual match label — visible + indexed by crawlers */}
-      <div className="mt-4 text-center space-y-1">
-        <p className="text-sm font-semibold text-gray-700 dark:text-gray-300">{current.labelEn} — Live Stream Free</p>
-        <p className="text-sm text-gray-500 dark:text-gray-400">{current.label} • بث مباشر مجاني</p>
-        <p className="text-xs text-gray-400 dark:text-gray-500">{current.labelFr} — Streaming en direct gratuit</p>
-      </div>
-
-      {/* SEO block — all matches in 3 languages, crawlable */}
-      <div className="mt-8 p-4 rounded-2xl bg-gray-50 dark:bg-gray-800 border border-gray-100 dark:border-gray-700 text-xs text-gray-500 dark:text-gray-400 leading-6">
-        <p className="font-semibold text-gray-600 dark:text-gray-300 mb-2">Manchester United vs Liverpool Live Stream Free • مانشستر يونايتد ضد ليفربول بث مباشر • Manchester United vs Liverpool streaming gratuit</p>
-        <ul className="space-y-1">
-          {STREAMS.map((s) => (
-            <li key={s.id}>
-              <span className="text-gray-700 dark:text-gray-300 font-medium">{s.labelEn}</span>
-              {' • '}
-              <span>{s.label}</span>
-              {' • '}
-              <span>{s.labelFr}</span>
-              {' — '}
-              <span className="text-brand-500">live stream free • بث مباشر مجاني • streaming gratuit</span>
-            </li>
-          ))}
-        </ul>
-      </div>
-    </div>
-  );
-}
-
 export function Home() {
   const { url, platform, isLoading, error, result, handleUrlChange, processUrl } = useDownloader();
   const { history, addToHistory, clearHistory, removeFromHistory } = useHistory();
@@ -310,16 +226,6 @@ export function Home() {
         </div>
 
       </section>
-      {/* Live Stream Section */}
-      <section className="w-full bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800 py-16">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl font-bold font-heading text-gray-900 dark:text-white mb-6 text-center">
-            🔴 Manchester United vs Liverpool — مانشستر يونايتد ضد ليفربول — Manchester United vs Liverpool en direct
-          </h2>
-          <LiveStreamTabs />
-        </div>
-      </section>
-
       {/* Latest Blog Articles */}
       <section className="w-full bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800 py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
