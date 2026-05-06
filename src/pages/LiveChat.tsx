@@ -23,99 +23,99 @@ const USERS = [
 // ─── Giant multilingual message pool (mixed randomly) ─────────────────────────
 const ALL_MESSAGES: { user: string; text: string }[] = [
   // English
-  { user: 'Daliida',   text: 'Hey everyone! 👋 Welcome to the chat!' },
-  { user: 'Sara_22',   text: 'Hi! Anyone watching the match tonight? ⚽' },
-  { user: 'Karim',     text: 'beIN Sports 1 has a great game on right now 🔴' },
-  { user: 'Daliida',   text: 'I just downloaded the highlights using MediaGrabber 😍' },
-  { user: 'Nour',      text: 'How do you download TikTok videos without watermark?' },
-  { user: 'Yasmine',   text: 'Just paste the link on MediaGrabber, super easy!' },
-  { user: 'Mehdi',     text: 'Works for Instagram Reels too 🙌' },
-  { user: 'Daliida',   text: 'YouTube, Twitter, Facebook... all platforms supported!' },
-  { user: 'Lina',      text: 'This site is amazing 💯' },
-  { user: 'Amine',     text: 'Who else is here for the live stream? 🏆' },
-  { user: 'Rania',     text: 'PSG game starts in 10 minutes! 🔥' },
-  { user: 'Sofiane',   text: 'Can you download YouTube Shorts too?' },
-  { user: 'Daliida',   text: 'Yes! YouTube Shorts, Reels, TikToks — all of them 🎬' },
-  { user: 'Fatima',    text: 'I love this chat, so friendly here 💕' },
-  { user: 'Omar_DZ',   text: 'Algeria vs Morocco tonight, who wins? 🇩🇿🇲🇦' },
-  { user: 'Leila',     text: 'Just tried MediaGrabber for the first time, works perfectly!' },
-  { user: 'Youssef',   text: 'Does it work on mobile too?' },
-  { user: 'Daliida',   text: 'Yes, works on iPhone and Android 📱' },
-  { user: 'Mariam',    text: 'The stream quality is so good today 🎉' },
-  { user: 'Hamza',     text: 'Anyone know the score? I missed the first half 😅' },
-  { user: 'Inès',      text: 'GOAL!!! 🥅⚽🎊' },
-  { user: 'Tarek',     text: 'What a save by the goalkeeper! 🧤' },
-  { user: 'Sana',      text: 'I downloaded 10 videos today with MediaGrabber lol 😂' },
-  { user: 'Bilal',     text: 'Best free downloader I have ever used 👌' },
-  { user: 'Daliida',   text: 'Share the link with your friends! 🔗' },
+  { user: 'Daliida', text: 'Hey everyone! 👋 Welcome to the chat!' },
+  { user: 'Sara_22', text: 'Hi! Anyone watching the match tonight? ⚽' },
+  { user: 'Karim', text: 'beIN Sports 1 has a great game on right now 🔴' },
+  { user: 'Daliida', text: 'I just downloaded the highlights using MediaGrabber 😍' },
+  { user: 'Nour', text: 'How do you download TikTok videos without watermark?' },
+  { user: 'Yasmine', text: 'Just paste the link on MediaGrabber, super easy!' },
+  { user: 'Mehdi', text: 'Works for Instagram Reels too 🙌' },
+  { user: 'Daliida', text: 'YouTube, Twitter, Facebook... all platforms supported!' },
+  { user: 'Lina', text: 'This site is amazing 💯' },
+  { user: 'Amine', text: 'Who else is here for the live stream? 🏆' },
+  { user: 'Rania', text: 'PSG game starts in 10 minutes! 🔥' },
+  { user: 'Sofiane', text: 'Can you download YouTube Shorts too?' },
+  { user: 'Daliida', text: 'Yes! YouTube Shorts, Reels, TikToks — all of them 🎬' },
+  { user: 'Fatima', text: 'I love this chat, so friendly here 💕' },
+  { user: 'Omar_DZ', text: 'Algeria vs Morocco tonight, who wins? 🇩🇿🇲🇦' },
+  { user: 'Leila', text: 'Just tried MediaGrabber for the first time, works perfectly!' },
+  { user: 'Youssef', text: 'Does it work on mobile too?' },
+  { user: 'Daliida', text: 'Yes, works on iPhone and Android 📱' },
+  { user: 'Mariam', text: 'The stream quality is so good today 🎉' },
+  { user: 'Hamza', text: 'Anyone know the score? I missed the first half 😅' },
+  { user: 'Inès', text: 'GOAL!!! 🥅⚽🎊' },
+  { user: 'Tarek', text: 'What a save by the goalkeeper! 🧤' },
+  { user: 'Sana', text: 'I downloaded 10 videos today with MediaGrabber lol 😂' },
+  { user: 'Bilal', text: 'Best free downloader I have ever used 👌' },
+  { user: 'Daliida', text: 'Share the link with your friends! 🔗' },
 
   // French
-  { user: 'Daliida',   text: 'Salut tout le monde! 👋 Bienvenue dans le chat!' },
-  { user: 'Sara_22',   text: 'Quelqu\'un regarde le match ce soir? ⚽' },
-  { user: 'Karim',     text: 'beIN Sports 1 diffuse un super match 🔴' },
-  { user: 'Nour',      text: 'Comment télécharger des vidéos TikTok sans filigrane?' },
-  { user: 'Yasmine',   text: 'Colle le lien sur MediaGrabber, c\'est super simple!' },
-  { user: 'Mehdi',     text: 'Ça marche aussi pour les Reels Instagram 🙌' },
-  { user: 'Daliida',   text: 'Et YouTube, Twitter, Facebook... toutes les plateformes!' },
-  { user: 'Lina',      text: 'Ce site est incroyable 💯' },
-  { user: 'Amine',     text: 'Qui est là pour le live stream? 🏆' },
-  { user: 'Rania',     text: 'Le match du PSG commence dans 10 minutes! 🔥' },
-  { user: 'Sofiane',   text: 'On peut télécharger les YouTube Shorts aussi?' },
-  { user: 'Daliida',   text: 'Oui! Shorts, Reels, TikToks — tout est supporté 🎬' },
-  { user: 'Fatima',    text: 'J\'adore ce chat, tout le monde est sympa 💕' },
-  { user: 'Leila',     text: 'J\'ai essayé MediaGrabber pour la première fois, parfait!' },
-  { user: 'Youssef',   text: 'Ça marche sur mobile aussi?' },
-  { user: 'Daliida',   text: 'Oui, iPhone et Android 📱' },
-  { user: 'Mariam',    text: 'La qualité du stream est excellente aujourd\'hui 🎉' },
-  { user: 'Hamza',     text: 'Quelqu\'un connaît le score? J\'ai raté la première mi-temps 😅' },
-  { user: 'Inès',      text: 'BUUUT!!! 🥅⚽🎊' },
-  { user: 'Tarek',     text: 'Quel arrêt du gardien! 🧤' },
-  { user: 'Sana',      text: 'J\'ai téléchargé 10 vidéos aujourd\'hui avec MediaGrabber lol 😂' },
-  { user: 'Bilal',     text: 'Meilleur téléchargeur gratuit que j\'ai jamais utilisé 👌' },
-  { user: 'Daliida',   text: 'Partagez le lien avec vos amis! 🔗' },
-  { user: 'Omar_DZ',   text: 'Allez l\'Algérie! 🇩🇿🔥' },
+  { user: 'Daliida', text: 'Salut tout le monde! 👋 Bienvenue dans le chat!' },
+  { user: 'Sara_22', text: 'Quelqu\'un regarde le match ce soir? ⚽' },
+  { user: 'Karim', text: 'beIN Sports 1 diffuse un super match 🔴' },
+  { user: 'Nour', text: 'Comment télécharger des vidéos TikTok sans filigrane?' },
+  { user: 'Yasmine', text: 'Colle le lien sur MediaGrabber, c\'est super simple!' },
+  { user: 'Mehdi', text: 'Ça marche aussi pour les Reels Instagram 🙌' },
+  { user: 'Daliida', text: 'Et YouTube, Twitter, Facebook... toutes les plateformes!' },
+  { user: 'Lina', text: 'Ce site est incroyable 💯' },
+  { user: 'Amine', text: 'Qui est là pour le live stream? 🏆' },
+  { user: 'Rania', text: 'Le match du PSG commence dans 10 minutes! 🔥' },
+  { user: 'Sofiane', text: 'On peut télécharger les YouTube Shorts aussi?' },
+  { user: 'Daliida', text: 'Oui! Shorts, Reels, TikToks — tout est supporté 🎬' },
+  { user: 'Fatima', text: 'J\'adore ce chat, tout le monde est sympa 💕' },
+  { user: 'Leila', text: 'J\'ai essayé MediaGrabber pour la première fois, parfait!' },
+  { user: 'Youssef', text: 'Ça marche sur mobile aussi?' },
+  { user: 'Daliida', text: 'Oui, iPhone et Android 📱' },
+  { user: 'Mariam', text: 'La qualité du stream est excellente aujourd\'hui 🎉' },
+  { user: 'Hamza', text: 'Quelqu\'un connaît le score? J\'ai raté la première mi-temps 😅' },
+  { user: 'Inès', text: 'BUUUT!!! 🥅⚽🎊' },
+  { user: 'Tarek', text: 'Quel arrêt du gardien! 🧤' },
+  { user: 'Sana', text: 'J\'ai téléchargé 10 vidéos aujourd\'hui avec MediaGrabber lol 😂' },
+  { user: 'Bilal', text: 'Meilleur téléchargeur gratuit que j\'ai jamais utilisé 👌' },
+  { user: 'Daliida', text: 'Partagez le lien avec vos amis! 🔗' },
+  { user: 'Omar_DZ', text: 'Allez l\'Algérie! 🇩🇿🔥' },
 
   // Arabic
-  { user: 'Daliida',   text: 'مرحباً بالجميع! 👋 أهلاً بكم في الدردشة!' },
-  { user: 'Sara_22',   text: 'مرحباً! هل أحد يشاهد المباراة الليلة؟ ⚽' },
-  { user: 'Karim',     text: 'beIN Sports 1 تبث مباراة رائعة الآن 🔴' },
-  { user: 'Daliida',   text: 'لقد حملت أبرز اللحظات باستخدام MediaGrabber 😍' },
-  { user: 'Nour',      text: 'كيف أحمل فيديوهات تيك توك بدون علامة مائية؟' },
-  { user: 'Yasmine',   text: 'فقط الصق الرابط في MediaGrabber، سهل جداً!' },
-  { user: 'Mehdi',     text: 'يعمل أيضاً مع Instagram Reels 🙌' },
-  { user: 'Daliida',   text: 'يوتيوب وتويتر وفيسبوك... كل المنصات مدعومة!' },
-  { user: 'Lina',      text: 'هذا الموقع رائع جداً 💯' },
-  { user: 'Amine',     text: 'من هنا للبث المباشر؟ 🏆' },
-  { user: 'Rania',     text: 'مباراة PSG تبدأ بعد 10 دقائق! 🔥' },
-  { user: 'Sofiane',   text: 'هل يمكن تحميل YouTube Shorts أيضاً؟' },
-  { user: 'Daliida',   text: 'نعم! Shorts وReels وTikToks — كلها مدعومة 🎬' },
-  { user: 'Fatima',    text: 'أحب هذه الدردشة، الجميع ودود هنا 💕' },
-  { user: 'Omar_DZ',   text: 'الجزائر والمغرب الليلة، من سيفوز؟ 🇩🇿🇲🇦' },
-  { user: 'Leila',     text: 'جربت MediaGrabber لأول مرة، يعمل بشكل مثالي!' },
-  { user: 'Youssef',   text: 'هل يعمل على الهاتف أيضاً؟' },
-  { user: 'Daliida',   text: 'نعم، يعمل على iPhone وAndroid 📱' },
-  { user: 'Mariam',    text: 'جودة البث رائعة اليوم 🎉' },
-  { user: 'Hamza',     text: 'هل أحد يعرف النتيجة؟ فاتني الشوط الأول 😅' },
-  { user: 'Inès',      text: 'هدددف!!! 🥅⚽🎊' },
-  { user: 'Tarek',     text: 'يا له من تصدٍّ رائع من الحارس! 🧤' },
-  { user: 'Sana',      text: 'حملت 10 فيديوهات اليوم مع MediaGrabber 😂' },
-  { user: 'Bilal',     text: 'أفضل أداة تحميل مجانية استخدمتها 👌' },
-  { user: 'Daliida',   text: 'شاركوا الرابط مع أصدقائكم! 🔗' },
-  { user: 'Omar_DZ',   text: 'يلا الجزائر! 🇩🇿🔥' },
+  { user: 'Daliida', text: 'مرحباً بالجميع! 👋 أهلاً بكم في الدردشة!' },
+  { user: 'Sara_22', text: 'مرحباً! هل أحد يشاهد المباراة الليلة؟ ⚽' },
+  { user: 'Karim', text: 'beIN Sports 1 تبث مباراة رائعة الآن 🔴' },
+  { user: 'Daliida', text: 'لقد حملت أبرز اللحظات باستخدام MediaGrabber 😍' },
+  { user: 'Nour', text: 'كيف أحمل فيديوهات تيك توك بدون علامة مائية؟' },
+  { user: 'Yasmine', text: 'فقط الصق الرابط في MediaGrabber، سهل جداً!' },
+  { user: 'Mehdi', text: 'يعمل أيضاً مع Instagram Reels 🙌' },
+  { user: 'Daliida', text: 'يوتيوب وتويتر وفيسبوك... كل المنصات مدعومة!' },
+  { user: 'Lina', text: 'هذا الموقع رائع جداً 💯' },
+  { user: 'Amine', text: 'من هنا للبث المباشر؟ 🏆' },
+  { user: 'Rania', text: 'مباراة PSG تبدأ بعد 10 دقائق! 🔥' },
+  { user: 'Sofiane', text: 'هل يمكن تحميل YouTube Shorts أيضاً؟' },
+  { user: 'Daliida', text: 'نعم! Shorts وReels وTikToks — كلها مدعومة 🎬' },
+  { user: 'Fatima', text: 'أحب هذه الدردشة، الجميع ودود هنا 💕' },
+  { user: 'Omar_DZ', text: 'الجزائر والمغرب الليلة، من سيفوز؟ 🇩🇿🇲🇦' },
+  { user: 'Leila', text: 'جربت MediaGrabber لأول مرة، يعمل بشكل مثالي!' },
+  { user: 'Youssef', text: 'هل يعمل على الهاتف أيضاً؟' },
+  { user: 'Daliida', text: 'نعم، يعمل على iPhone وAndroid 📱' },
+  { user: 'Mariam', text: 'جودة البث رائعة اليوم 🎉' },
+  { user: 'Hamza', text: 'هل أحد يعرف النتيجة؟ فاتني الشوط الأول 😅' },
+  { user: 'Inès', text: 'هدددف!!! 🥅⚽🎊' },
+  { user: 'Tarek', text: 'يا له من تصدٍّ رائع من الحارس! 🧤' },
+  { user: 'Sana', text: 'حملت 10 فيديوهات اليوم مع MediaGrabber 😂' },
+  { user: 'Bilal', text: 'أفضل أداة تحميل مجانية استخدمتها 👌' },
+  { user: 'Daliida', text: 'شاركوا الرابط مع أصدقائكم! 🔗' },
+  { user: 'Omar_DZ', text: 'يلا الجزائر! 🇩🇿🔥' },
 
   // Mixed / multilingual bursts
-  { user: 'Daliida',   text: 'Hola! Bienvenidos 🌍 مرحبا! Bienvenue!' },
-  { user: 'Sara_22',   text: 'Forza! ⚽ Allez! يلا!' },
-  { user: 'Karim',     text: '🔥🔥🔥 GOAT match tonight!' },
-  { user: 'Rania',     text: 'واو 😱 Incroyable! What a game!' },
-  { user: 'Sofiane',   text: 'MediaGrabber = 🐐 best tool ever / meilleur outil / أفضل أداة' },
-  { user: 'Daliida',   text: '💬 Keep chatting, I\'m here all night! / Je suis là toute la nuit! / أنا هنا طوال الليل!' },
-  { user: 'Leila',     text: 'Merci Daliida 💕 شكراً دليدة 💕 Thanks Daliida 💕' },
-  { user: 'Youssef',   text: 'Anyone from Algeria? 🇩🇿 من الجزائر؟ Quelqu\'un d\'Algérie?' },
-  { user: 'Mariam',    text: 'Morocco 🇲🇦 represent! المغرب 🇲🇦' },
-  { user: 'Hamza',     text: 'Tunisia 🇹🇳 in the house! تونس 🇹🇳' },
-  { user: 'Inès',      text: 'France 🇫🇷 ici! فرنسا 🇫🇷' },
-  { user: 'Daliida',   text: 'We are all one community here 🌍❤️ كلنا مجتمع واحد هنا' },
+  { user: 'Daliida', text: 'Hola! Bienvenidos 🌍 مرحبا! Bienvenue!' },
+  { user: 'Sara_22', text: 'Forza! ⚽ Allez! يلا!' },
+  { user: 'Karim', text: '🔥🔥🔥 GOAT match tonight!' },
+  { user: 'Rania', text: 'واو 😱 Incroyable! What a game!' },
+  { user: 'Sofiane', text: 'MediaGrabber = 🐐 best tool ever / meilleur outil / أفضل أداة' },
+  { user: 'Daliida', text: '💬 Keep chatting, I\'m here all night! / Je suis là toute la nuit! / أنا هنا طوال الليل!' },
+  { user: 'Leila', text: 'Merci Daliida 💕 شكراً دليدة 💕 Thanks Daliida 💕' },
+  { user: 'Youssef', text: 'Anyone from Algeria? 🇩🇿 من الجزائر؟ Quelqu\'un d\'Algérie?' },
+  { user: 'Mariam', text: 'Morocco 🇲🇦 represent! المغرب 🇲🇦' },
+  { user: 'Hamza', text: 'Tunisia 🇹🇳 in the house! تونس 🇹🇳' },
+  { user: 'Inès', text: 'France 🇫🇷 ici! فرنسا 🇫🇷' },
+  { user: 'Daliida', text: 'We are all one community here 🌍❤️ كلنا مجتمع واحد هنا' },
 ];
 
 function getTime() {
@@ -237,22 +237,22 @@ export function LiveChat() {
       </div>
 
       <AdsterraNativeBanner />
-{/* Live stream banner */}
-<div className="mb-6 rounded-2xl overflow-hidden shadow-lg border border-gray-200 dark:border-gray-800 bg-black">
-  <div className="px-4 py-2 text-xs font-medium text-white bg-red-600 flex items-center justify-between">
-    <span>🔴 STREAM </span>
-    <span className="animate-pulse">LIVE</span>
-  </div>
+      {/* Live stream banner */}
+      <div className="mb-6 rounded-2xl overflow-hidden shadow-lg border border-gray-200 dark:border-gray-800 bg-black">
+        <div className="px-4 py-2 text-xs font-medium text-white bg-red-600 flex items-center justify-between">
+          <span>🔴 STREAM </span>
+          <span className="animate-pulse">LIVE</span>
+        </div>
 
-  <video
-    src="https://i.makeagif.com/media/12-10-2017/TgxW1Z.mp4"
-    autoPlay
-    loop
-    muted
-    playsInline
-    className="w-full h-auto max-h-[320px] object-cover"
-  />
-</div>
+        <video
+          src="https://i.makeagif.com/media/12-10-2017/TgxW1Z.mp4"
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="w-full h-auto max-h-[320px] object-cover"
+        />
+      </div>
       {/* Chat box */}
       <div className="mt-8 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-3xl overflow-hidden shadow-xl">
 
@@ -286,13 +286,12 @@ export function LiveChat() {
                   ${msg.user === 'Daliida' ? 'text-pink-500' : msg.self ? 'text-brand-600 dark:text-brand-400' : 'text-gray-500 dark:text-gray-400'}`}>
                   {msg.self ? t('chat.you') : msg.user}
                 </span>
-                <div className={`px-4 py-2.5 rounded-2xl text-sm leading-relaxed ${
-                  msg.self
+                <div className={`px-4 py-2.5 rounded-2xl text-sm leading-relaxed ${msg.self
                     ? 'bg-brand-500 text-white rounded-tr-sm'
                     : msg.user === 'Daliida'
-                    ? 'bg-pink-50 dark:bg-pink-900/20 text-gray-800 dark:text-gray-200 border border-pink-100 dark:border-pink-900/30 rounded-tl-sm'
-                    : 'bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-200 rounded-tl-sm'
-                }`}>
+                      ? 'bg-pink-50 dark:bg-pink-900/20 text-gray-800 dark:text-gray-200 border border-pink-100 dark:border-pink-900/30 rounded-tl-sm'
+                      : 'bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-200 rounded-tl-sm'
+                  }`}>
                   {msg.text}
                 </div>
                 <span className="text-[10px] text-gray-400">{msg.time}</span>
