@@ -3,6 +3,7 @@ import { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { SEO } from '../components/SEO';
 import { useLocalizedBlogPost } from '../data/blogI18n';
+import { useLocalizedBlogPosts } from '../data/blogI18n';
 import { Calendar, ArrowLeft, Download } from 'lucide-react';
 import { AdsterraNativeBanner } from '../components/layout/AdBlock';
 import { useAnalytics } from '../hooks/useAnalytics';
@@ -11,6 +12,7 @@ export function BlogPost() {
   const { slug } = useParams<{ slug: string }>();
   const { t } = useTranslation();
   const post = useLocalizedBlogPost(slug ?? '');
+  const allPosts = useLocalizedBlogPosts();
   const { trackBlogRead } = useAnalytics();
 
   useEffect(() => {
@@ -35,6 +37,13 @@ export function BlogPost() {
       "name": "MediaGrabber"
     }
   };
+
+  const relatedPosts = (() => {
+    if (!post) return [];
+    let related = allPosts.filter(p => p.slug !== post.slug && p.category === post.category).slice(0, 4);
+    if (related.length === 0) related = allPosts.filter(p => p.slug !== post.slug).slice(0, 4);
+    return related;
+  })();
 
   return (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
@@ -100,6 +109,19 @@ export function BlogPost() {
               >
                 {t('blog.goToDownloader', 'Go to Downloader')}
               </Link>
+            </div>
+
+            <div className="bg-white dark:bg-gray-900 border border-gray-100 dark:border-gray-800 rounded-2xl p-6">
+              <h4 className="text-lg font-semibold mb-3">Related articles</h4>
+              <ul className="space-y-2 text-sm">
+                {relatedPosts.map(r => (
+                  <li key={r.slug}>
+                    <Link to={`/blog/${r.slug}`} className="text-gray-600 dark:text-gray-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors">
+                      {r.title}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
             </div>
           </aside>
         </div>

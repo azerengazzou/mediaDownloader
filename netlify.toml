@@ -4,6 +4,30 @@
   functions = "netlify/functions"
 
 [[redirects]]
+  from = "https://mediagrabber.org/*"
+  to = "https://mediagrabber.app/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.mediagrabber.org/*"
+  to = "https://mediagrabber.app/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://mediagrabber.app/*"
+  to = "https://mediagrabber.app/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://mediagrabber.netlify.app/*"
+  to = "https://mediagrabber.app/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
   from = "/api/meta"
   to = "/.netlify/functions/cobalt"
   status = 200
