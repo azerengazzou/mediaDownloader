@@ -4,28 +4,18 @@
   functions = "netlify/functions"
 
 [[redirects]]
-  from = "https://mediagrabber.org/*"
-  to = "https://mediagrabber.app/:splat"
+  from = "/*"
+  to = "https://mediagrabber.org/:splat"
   status = 301
   force = true
+  conditions = { Host = ["mediagrabber.com", "www.mediagrabber.com", "mediagrabber.netlify.app", "www.mediagrabber.netlify.app"] }
 
 [[redirects]]
-  from = "https://www.mediagrabber.org/*"
-  to = "https://mediagrabber.app/:splat"
+  from = "/*"
+  to = "https://mediagrabber.org/:splat"
   status = 301
   force = true
-
-[[redirects]]
-  from = "http://mediagrabber.app/*"
-  to = "https://mediagrabber.app/:splat"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "https://mediagrabber.netlify.app/*"
-  to = "https://mediagrabber.app/:splat"
-  status = 301
-  force = true
+  conditions = { Scheme = ["http"], Host = ["mediagrabber.org", "www.mediagrabber.org"] }
 
 [[redirects]]
   from = "/api/meta"
