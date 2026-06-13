@@ -7,97 +7,77 @@ import { Radio } from 'lucide-react';
 
 // ─── Stream sources (shared across all sports) ────────────────────────────────
 const STREAMS = [
-  { id: 'stream1', labelEn: 'Stream 1 — Main', labelAr: 'البث الرئيسي', labelFr: 'Flux 1 — Principal', src: 'https://5.wwwkora.com/albaplayer/bein-sports-hd-1/' },
-  { id: 'stream2', labelEn: 'Stream 2', labelAr: 'البث 2', labelFr: 'Flux 2', src: 'https://dns22.yalla-sport.link/chtv/ch3.php' },
-  { id: 'stream3', labelEn: 'Stream 3', labelAr: 'البث 3', labelFr: 'Flux 3', src: 'https://5.wwwkora.com/albaplayer/bein-sports-hd-7/' },
-  { id: 'stream4', labelEn: 'Stream 4', labelAr: 'البث 4', labelFr: 'Flux 4', src: 'https://5.wwwkora.com/albaplayer/bein-sports-hd-6/' },
-  { id: 'stream5', labelEn: 'Stream 5', labelAr: 'البث 5', labelFr: 'Flux 5', src: 'https://5.wwwkora.com/albaplayer/bein-sports-hd-4/' },
-  { id: 'stream6', labelEn: 'Stream 6', labelAr: 'البث 6', labelFr: 'Flux 6', src: 'https://5.wwwkora.com/albaplayer/bein-sports-hd-1/' },
-  { id: 'stream7', labelEn: 'Stream HD', labelAr: 'بث HD', labelFr: 'Flux HD', src: 'https://11.yallashoot1.cc/albaplayer/bein-2/?serv=0' },
-  { id: 'stream8', labelEn: 'Stream 4K', labelAr: 'بث 4K', labelFr: 'Flux 4K', src: 'https://11.yallashoot1.cc/albaplayer/bein-2/?serv=0' },
+  { id: 'stream1', labelEn: 'Stream 1 — Main', labelAr: 'البث الرئيسي', labelFr: 'Flux 1 — Principal', src: 'https://z1.depoooo.com/albaplayer/bein-2/' },
+  { id: 'stream2', labelEn: 'Stream 2', labelAr: 'البث 2', labelFr: 'Flux 2', src: 'https://z1.depoooo.com/albaplayer/bein-2/' },
+  { id: 'stream3', labelEn: 'Stream 3', labelAr: 'البث 3', labelFr: 'Flux 3', src: 'https://z1.depoooo.com/albaplayer/bein-2/' },
+  { id: 'stream4', labelEn: 'Stream 4', labelAr: 'البث 4', labelFr: 'Flux 4', src: 'https://z1.depoooo.com/albaplayer/bein-2/' },
+  { id: 'stream5', labelEn: 'Stream 5', labelAr: 'البث 5', labelFr: 'Flux 5', src: 'https://z1.depoooo.com/albaplayer/bein-2/' },
+  { id: 'stream6', labelEn: 'Stream 6', labelAr: 'البث 6', labelFr: 'Flux 6', src: 'https://z1.depoooo.com/albaplayer/bein-2/' },
+  { id: 'stream7', labelEn: 'Stream HD', labelAr: 'بث HD', labelFr: 'Flux HD', src: 'https://z1.depoooo.com/albaplayer/bein-2/' },
+  { id: 'stream8', labelEn: 'Stream 4K', labelAr: 'بث 4K', labelFr: 'Flux 4K', src: 'https://z1.depoooo.com/albaplayer/bein-2/' },
 ];
 
-// ─── Sports categories ────────────────────────────────────────────────────────
+// ─── FIFA World Cup 2026 Matches ──────────────────────────────────────────────
 const SPORTS = [
   {
-    id: 'football',
-    icon: '',
-    labelEn: 'Football',
-    labelAr: 'كرة القدم',
-    labelFr: 'Football',
-    matchEn: 'Manchester United vs Liverpool',
-    matchAr: 'مانشستر يونايتد ضد ليفربول',
-    matchFr: 'Manchester United vs Liverpool',
+    id: 'world-cup-finals',
+    icon: '🏆',
+    labelEn: 'Finals',
+    labelAr: 'النهائي',
+    labelFr: 'Finale',
+    matchEn: 'FIFA World Cup 2026 Finals',
+    matchAr: 'نهائي كأس العالم 2026',
+    matchFr: 'Finale de la Coupe du Monde 2026',
   },
   {
-    id: 'basketball',
-    icon: '',
-    labelEn: 'Basketball',
-    labelAr: 'كرة السلة',
-    labelFr: 'Basketball',
-    matchEn: 'NBA Live Stream',
-    matchAr: 'بث مباشر NBA',
-    matchFr: 'NBA en direct',
+    id: 'world-cup-semifinals',
+    icon: '🥈',
+    labelEn: 'Semifinals',
+    labelAr: 'نصف النهائي',
+    labelFr: 'Demi-finales',
+    matchEn: 'FIFA World Cup 2026 Semifinals',
+    matchAr: 'نصف نهائي كأس العالم 2026',
+    matchFr: 'Demi-finales de la Coupe du Monde 2026',
   },
   {
-    id: 'tennis',
-    icon: '',
-    labelEn: 'Tennis',
-    labelAr: 'التنس',
-    labelFr: 'Tennis',
-    matchEn: 'Tennis Live Stream',
-    matchAr: 'بث مباشر التنس',
-    matchFr: 'Tennis en direct',
+    id: 'world-cup-quarterfinals',
+    icon: '⚽',
+    labelEn: 'Quarterfinals',
+    labelAr: 'ربع النهائي',
+    labelFr: 'Quarts de finale',
+    matchEn: 'FIFA World Cup 2026 Quarterfinals',
+    matchAr: 'ربع نهائي كأس العالم 2026',
+    matchFr: 'Quarts de finale de la Coupe du Monde 2026',
   },
   {
-    id: 'boxing',
-    icon: '',
-    labelEn: 'Boxing',
-    labelAr: 'الملاكمة',
-    labelFr: 'Boxe',
-    matchEn: 'Boxing Live Stream',
-    matchAr: 'بث مباشر الملاكمة',
-    matchFr: 'Boxe en direct',
+    id: 'world-cup-round16',
+    icon: '🎯',
+    labelEn: 'Round of 16',
+    labelAr: 'دور الـ 16',
+    labelFr: 'Huitièmes de finale',
+    matchEn: 'FIFA World Cup 2026 Round of 16',
+    matchAr: 'دور الـ 16 من كأس العالم 2026',
+    matchFr: 'Huitièmes de finale de la Coupe du Monde 2026',
   },
   {
-    id: 'formula1',
-    icon: '',
-    labelEn: 'Formula 1',
-    labelAr: 'فورمولا 1',
-    labelFr: 'Formule 1',
-    matchEn: 'Formula 1 Live Stream',
-    matchAr: 'بث مباشر فورمولا 1',
-    matchFr: 'Formule 1 en direct',
+    id: 'world-cup-group-stage',
+    icon: '🌍',
+    labelEn: 'Group Stage',
+    labelAr: 'مرحلة المجموعات',
+    labelFr: 'Phase de groupes',
+    matchEn: 'FIFA World Cup 2026 Group Stage',
+    matchAr: 'مرحلة المجموعات من كأس العالم 2026',
+    matchFr: 'Phase de groupes de la Coupe du Monde 2026',
   },
   {
-    id: 'ufc',
-    icon: '',
-    labelEn: 'UFC / MMA',
-    labelAr: 'UFC / MMA',
-    labelFr: 'UFC / MMA',
-    matchEn: 'UFC Live Stream',
-    matchAr: 'بث مباشر UFC',
-    matchFr: 'UFC en direct',
-  },
-  {
-    id: 'rugby',
-    icon: '',
-    labelEn: 'Rugby',
-    labelAr: 'الرغبي',
-    labelFr: 'Rugby',
-    matchEn: 'Rugby Live Stream',
-    matchAr: 'بث مباشر الرغبي',
-    matchFr: 'Rugby en direct',
-  },
-  {
-    id: 'cycling',
-    icon: '',
-    labelEn: 'Cycling',
-    labelAr: 'الدراجات',
-    labelFr: 'Cyclisme',
-    matchEn: 'Cycling Live Stream',
-    matchAr: 'بث مباشر الدراجات',
-    matchFr: 'Cyclisme en direct',
+    id: 'world-cup-qualifiers',
+    icon: '🔥',
+    labelEn: 'Qualifiers',
+    labelAr: 'التصفيات',
+    labelFr: 'Qualifications',
+    matchEn: 'FIFA World Cup 2026 Qualifiers',
+    matchAr: 'تصفيات كأس العالم 2026',
+    matchFr: 'Qualifications pour la Coupe du Monde 2026',
   },
 ];
 
@@ -173,7 +153,6 @@ export function LiveStream() {
       <SEO
         title={`${sport.labelEn} Live Stream — ${sport.matchEn} | MediaGrabber`}
         description={`Watch ${sport.matchEn} live stream free in HD. ${sport.matchAr} بث مباشر مجاني. ${sport.matchFr} streaming gratuit.`}
-        schema={[eventSchema, breadcrumbSchema]}
       />
 
       {/* Header */}
@@ -291,16 +270,10 @@ export function LiveStream() {
         <p>{t('stream.seoBlockText')}</p>
 
         {/* ↓↓↓ ADD YOUR CUSTOM SEO TEXT HERE — replace "Hello World" below ↓↓↓ */}
-        <h3>Watch live sports streaming for free in high quality, including football, basketball</h3>
-        <p>Watch live sports streaming for free in high quality, including football, basketball, and more from leagues around the world. Follow your favorite teams and never miss a match with our fast and reliable live streaming platform. From major competitions like the UEFA Champions League, Premier League, La Liga, and NBA, we bring you real-time access to the biggest sporting events. Stay updated with live scores, match schedules, and instant streaming links for today’s games. Whether you are a football fan or a basketball enthusiast, enjoy seamless streaming on desktop and mobile devices anytime, anywhere. Our platform aggregates live sports content and keeps you connected to global sports coverage, including channels like beIN Sports, known for broadcasting top-tier football leagues, international tournaments, and exclusive sports content. Experience the excitement of live matches with smooth playback and minimal buffering. Join thousands of sports fans who rely on our platform daily to watch live matches online for free. From kick-off to final whistle, enjoy uninterrupted sports streaming with a user-friendly interface and up-to-date match listings.</p>
+        <h3>FIFA World Cup 2026 Live Streaming — Watch All Matches Free in HD</h3>
+        <p>Watch FIFA World Cup for free in high quality, including football, basketball, and more from leagues around the world. Follow your favorite teams and never miss a match with our fast and reliable live streaming platform. From major competitions like the UEFA Champions League, Premier League, La Liga, and NBA, we bring you real-time access to the biggest sporting events. Stay updated with live scores, match schedules, and instant streaming links for today’s games. Whether you are a football fan or a basketball enthusiast, enjoy seamless streaming on desktop and mobile devices anytime, anywhere. Our platform aggregates live sports content and keeps you connected to global sports coverage, including channels like beIN Sports, known for broadcasting top-tier football leagues, international tournaments, and exclusive sports content. Experience the excitement of live matches with smooth playback and minimal buffering. Join thousands of sports fans who rely on our platform daily to watch live matches online for free. From kick-off to final whistle, enjoy uninterrupted sports streaming with a user-friendly interface and up-to-date match listings.</p>
         <br />  <br />  <br />
-        <p>شاهد البث المباشر للمباريات الرياضية مجانًا وبجودة عالية، بما في ذلك كرة القدم وكرة السلة وغيرها من الدوريات حول العالم. تابع فرقك المفضلة ولا تفوّت أي مباراة مع منصتنا السريعة والموثوقة للبث المباشر. من البطولات الكبرى مثل دوري أبطال أوروبا، الدوري الإنجليزي الممتاز، الدوري الإسباني (لا ليغا)، ودوري NBA، نوفر لك وصولًا فوريًا لأكبر الأحداث الرياضية في الوقت الحقيقي.
-
-          ابقَ على اطلاع على النتائج المباشرة، جداول المباريات، وروابط البث الفوري لمباريات اليوم. سواء كنت من عشاق كرة القدم أو من محبي كرة السلة، استمتع ببث سلس على أجهزة الكمبيوتر والهاتف المحمول في أي وقت ومن أي مكان.
-
-          تجمع منصتنا المحتوى الرياضي المباشر وتبقيك متصلاً بالتغطية الرياضية العالمية، بما في ذلك قنوات مثل beIN Sports، المعروفة بنقل أفضل بطولات كرة القدم، والبطولات الدولية، والمحتوى الرياضي الحصري. استمتع بإثارة المباريات المباشرة مع تشغيل سلس وتقليل كبير في التقطعات.
-
-          انضم إلى آلاف محبي الرياضة الذين يعتمدون على منصتنا يوميًا لمشاهدة المباريات مباشرة عبر الإنترنت مجانًا. من صافرة البداية حتى صافرة النهاية، استمتع ببث رياضي بدون انقطاع مع واجهة سهلة الاستخدام وتحديثات مستمرة لقوائم المباريات.</p>
+        <p>شاهد بث كأس العالم FIFA 2026 المباشر بجودة HD عالية من أي مكان في العالم. احصل على بث جميع المباريات بما في ذلك مرحلة المجموعات ودور الـ 16 والربع والنصف والنهائي. شاهد كل الأهداف واللحظات المثيرة من أكبر بطولة كرة قدم في العالم التي تقام في أمريكا الشمالية. سواء كنت تشاهد من الولايات المتحدة أو كندا أو المكسيك أو أي مكان آخر، توفر لك منصتنا الموثوقة بثاً مباشراً من كأس العالم 2026. تابع منتخبك المفضل وترتيب البطولة لحظة بلحظة، ولا تفوّت أي مباراة مع خدمة البث المباشر عالي الجودة. استمتع ببث سلس على أجهزة الكمبيوتر والهاتف المحمول مع خيارات جودة متعددة وتقليل التقطع. انضم إلى ملايين عشاق كرة القدم حول العالم الذين يثقون بمنصتنا للحصول على تغطية شاملة لكأس العالم.</p>
         <br />  <br />  <br />
         <p>Regardez des diffusions sportives en direct gratuitement en haute qualité, incluant le football, le basketball et bien plus encore, depuis des ligues du monde entier. Suivez vos équipes préférées et ne manquez jamais un match grâce à notre plateforme de streaming rapide et fiable. Des grandes compétitions comme la Ligue des Champions de l’UEFA, la Premier League, La Liga et la NBA, nous vous offrons un accès en temps réel aux plus grands événements sportifs.
 
@@ -315,7 +288,7 @@ export function LiveStream() {
       {/* ── Crawlable all-sports + all-streams SEO list ─────────────────────── */}
       <div className="mt-6 p-6 rounded-2xl bg-gray-50 dark:bg-gray-800 border border-gray-100 dark:border-gray-700">
         <h2 className="text-base font-bold font-heading text-gray-900 dark:text-white mb-4">
-          {t('stream.seoBlockTitle')} — All Sports Live Streams • جميع البث الرياضي المباشر • Tous les sports en direct
+          {t('stream.seoBlockTitle')} — FIFA World Cup 2026 Tournament Stages • مراحل بطولة كأس العالم 2026 • Étapes de la Coupe du Monde FIFA 2026
         </h2>
         <ul className="space-y-3 text-xs text-gray-500 dark:text-gray-400 leading-6">
           {SPORTS.map((sp) => (
