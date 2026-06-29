@@ -14,6 +14,7 @@ import { UnsupportedUrl } from './pages/UnsupportedUrl';
 import { DownloadAiVideoMp3 } from './pages/DownloadAiVideoMp3';
 import { LiveChat } from './pages/LiveChat';
 import { LiveStream } from './pages/LiveStream';
+import { PlatformDownloader } from './pages/PlatformDownloader';
 import { useAnalytics } from './hooks/useAnalytics';
 import { changeLanguage, getCurrentLanguage, getLanguageDirection } from './config/i18n';
 
@@ -66,6 +67,13 @@ const sharedRoutes = (
     <Route path="convertisseur-video" element={<UnsupportedUrl />} />
     <Route path="download-ai-video-mp3" element={<DownloadAiVideoMp3 />} />
     <Route path="chat-direct-with-girl" element={<LiveChat />} />
+    <Route path="youtube-downloader" element={<PlatformDownloader platformKey="youtube" />} />
+    <Route path="youtube-to-mp3" element={<PlatformDownloader platformKey="youtube-to-mp3" />} />
+    <Route path="tiktok-downloader" element={<PlatformDownloader platformKey="tiktok" />} />
+    <Route path="instagram-downloader" element={<PlatformDownloader platformKey="instagram" />} />
+    <Route path="facebook-downloader" element={<PlatformDownloader platformKey="facebook" />} />
+    <Route path="twitter-downloader" element={<PlatformDownloader platformKey="twitter" />} />
+    <Route path="x-downloader" element={<PlatformDownloader platformKey="twitter" />} />
     <Route path="live-stream" element={<LiveStream />} />
     <Route path="live-stream/:sportId" element={<LiveStream />} />
   </>

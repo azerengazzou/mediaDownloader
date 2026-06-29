@@ -151,5 +151,85 @@
         "mainStream": "Flux Principal",
         "seoBlockTitle": "Regarder Manchester United vs Liverpool en Streaming Gratuit",
         "seoBlockText": "Regardez Manchester United vs Liverpool en streaming gratuit en ligne en HD. Plusieurs sources disponibles. Aucune inscription requise — cliquez et regardez."
+    },
+    "platformPage": {
+        "youtube": {
+            "title": "Téléchargeur Vidéo YouTube",
+            "subtitle": "Télécharger des Vidéos & Shorts YouTube en HD",
+            "description": "Téléchargez des vidéos et des shorts YouTube en haute qualité MP4 ou MP3. Le téléchargeur YouTube de MediaGrabber est rapide, gratuit, sécurisé et sans inscription.",
+            "placeholder": "Collez le lien YouTube ici (ex. https://www.youtube.com/watch?v=...)",
+            "faqTitle": "FAQ Téléchargeur YouTube",
+            "q1": "Comment télécharger des vidéos YouTube gratuitement?",
+            "a1": "Copiez le lien de la vidéo ou du Short YouTube, collez-le dans le champ ci-dessus, cliquez sur Télécharger, choisissez le format/résolution souhaité, et enregistrez le fichier sur votre appareil.",
+            "q2": "Puis-je convertir des vidéos YouTube en MP3?",
+            "a2": "Oui! Vous pouvez extraire l'audio de n'importe quelle vidéo YouTube et le télécharger au format MP3 de haute qualité.",
+            "q3": "Est-il sûr et gratuit de télécharger des vidéos YouTube?",
+            "a3": "Absolument. MediaGrabber est 100% gratuit, sécurisé et ne nécessite aucune installation de logiciel ou inscription."
+        },
+        "tiktok": {
+            "title": "Téléchargeur Vidéo TikTok",
+            "subtitle": "Télécharger des Vidéos TikTok Sans Filigrane",
+            "description": "Enregistrez des vidéos TikTok en qualité HD sans filigrane. MediaGrabber est le meilleur téléchargeur TikTok en ligne pour enregistrer rapidement des vidéos en MP4 ou MP3.",
+            "placeholder": "Collez le lien TikTok ici (ex. https://www.tiktok.com/@username/video/...)",
+            "faqTitle": "FAQ Téléchargeur TikTok",
+            "q1": "Comment télécharger des vidéos TikTok sans filigrane?",
+            "a1": "Copiez le lien TikTok depuis l'application ou le site, collez-le dans le champ en haut de cette page, puis cliquez sur Télécharger. Vous aurez l'option de télécharger sans filigrane.",
+            "q2": "Puis-je télécharger la musique ou le MP3 d'un TikTok?",
+            "a2": "Oui, vous pouvez extraire et télécharger l'audio d'origine ou la musique de fond de n'importe quelle vidéo TikTok au format MP3.",
+            "q3": "Ce téléchargeur TikTok fonctionne-t-il sur mobile?",
+            "a3": "Oui, il fonctionne parfaitement sur tous les appareils mobiles (iOS, Android), tablettes et ordinateurs via n'importe quel navigateur web."
+        },
+        "instagram": {
+            "title": "Téléchargeur Instagram Reels & Vidéo",
+            "subtitle": "Télécharger des Reels, Photos & Stories Instagram",
+            "description": "Téléchargez des reels, vidéos, stories et photos Instagram en haute qualité. Téléchargeur Instagram en ligne rapide, gratuit et anonyme.",
+            "placeholder": "Collez le lien Instagram ici (ex. https://www.instagram.com/reel/...)",
+            "faqTitle": "FAQ Téléchargeur Instagram",
+            "q1": "Comment puis-je télécharger des Reels Instagram?",
+            "a1": "Copiez le lien du Reel depuis Instagram, collez-le dans le champ ci-dessus et cliquez sur Télécharger. Sélectionnez la qualité souhaitée et enregistrez-le.",
+            "q2": "Dois-je me connecter avec mon compte Instagram?",
+            "a2": "Non, vous n'avez pas besoin de vous connecter ou de partager vos identifiants. MediaGrabber fonctionne de manière anonyme et sans inscription.",
+            "q3": "Puis-je télécharger des photos et des stories également?",
+            "a3": "Oui! Vous pouvez télécharger des publications Instagram, des photos de carrousel, des vidéos et des stories en collant leurs liens respectifs."
+        },
+        "facebook": {
+            "title": "Téléchargeur Vidéo Facebook",
+            "subtitle": "Télécharger des Vidéos & Reels Facebook en HD",
+            "description": "Téléchargez des vidéos et des reels Facebook en qualité HD ou SD. Téléchargeur Facebook en ligne gratuit, rapide et sécurisé pour PC, Android et iOS.",
+            "placeholder": "Collez le lien Facebook ici (ex. https://www.facebook.com/.../videos/...)",
+            "faqTitle": "FAQ Téléchargeur Facebook",
+            "q1": "Comment télécharger des vidéos de Facebook?",
+            "a1": "Cliquez sur 'Partager' sur la vidéo Facebook, copiez le lien, collez-le dans notre outil, et cliquez sur Télécharger. Sélectionnez la qualité HD ou SD pour enregistrer la vidéo.",
+            "q2": "Puis-je télécharger des vidéos Facebook privées?",
+            "a2": "Actuellement, MediaGrabber prend en charge le téléchargement de vidéos et de reels Facebook publics. Les vidéos privées ne sont pas prises en charge pour des raisons de confidentialité.",
+            "q3": "Prend-il en charge les Facebook Reels?",
+            "a3": "Oui, vous pouvez télécharger n'importe quel Reel Facebook public au format MP4 en haute qualité en suivant les mêmes étapes simples."
+        },
+        "twitter": {
+            "title": "Téléchargeur Vidéo Twitter (X)",
+            "subtitle": "Télécharger des Vidéos & GIFs de X.com / Twitter",
+            "description": "Téléchargez des vidéos et des GIFs de X (Twitter) au format MP4. Le téléchargeur Twitter de MediaGrabber est rapide, gratuit et sans inscription.",
+            "placeholder": "Collez le lien X/Twitter ici (ex. https://x.com/.../status/...)",
+            "faqTitle": "FAQ Téléchargeur Twitter",
+            "q1": "Comment télécharger des vidéos de Twitter (X)?",
+            "a1": "Copiez l'URL du tweet contenant la vidéo ou le GIF, collez-la dans le champ ci-dessus, et cliquez sur Télécharger pour l'enregistrer en format MP4.",
+            "q2": "Puis-je télécharger des GIFs Twitter en MP4?",
+            "a2": "Oui, les GIFs de Twitter sont automatiquement convertis et peuvent être téléchargés sous forme de fichiers MP4 sur votre appareil.",
+            "q3": "Y a-t-il une limite aux téléchargements de vidéos Twitter?",
+            "a3": "Non, vous pouvez télécharger autant de vidéos et de GIFs de X/Twitter que vous le souhaitez, tout à fait gratuitement."
+        },
+        "youtube-to-mp3": {
+            "title": "Convertisseur YouTube en MP3",
+            "subtitle": "Convertir & Télécharger des Vidéos YouTube en MP3 de Haute Qualité",
+            "description": "Convertissez des vidéos YouTube en fichiers audio MP3 de haute qualité (jusqu'à 320 kbps). Convertisseur YouTube en MP3 en ligne gratuit, rapide et sécurisé.",
+            "placeholder": "Collez le lien YouTube ici (ex. https://www.youtube.com/watch?v=...)",
+            "faqTitle": "FAQ YouTube en MP3",
+            "q1": "Comment convertir une vidéo YouTube en MP3?",
+            "a1": "Collez le lien de la vidéo YouTube dans le champ de saisie, cliquez sur Télécharger, puis choisissez l'option 'MP3 Audio' dans la liste de téléchargement pour enregistrer le fichier audio.",
+            "q2": "Quelle qualité audio est prise en charge?",
+            "a2": "Nous prenons en charge l'extraction audio de haute qualité. Le fichier MP3 téléchargé correspondra à la meilleure qualité de flux audio disponible pour la vidéo source.",
+            "q3": "Puis-je convertir de longues vidéos YouTube en MP3?",
+            "a3": "Oui, vous pouvez convertir des vidéos de différentes durées en MP3. La conversion ne prend que quelques secondes."
+        }
     }
 }

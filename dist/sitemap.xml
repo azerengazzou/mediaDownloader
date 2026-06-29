@@ -1,134 +1,296 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset 
-  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-  xmlns:xhtml="http://www.w3.org/1999/xhtml">
-
-  <!-- HOME -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://mediagrabber.org/</loc>
-    <lastmod>2026-05-07</lastmod>
+    <lastmod>2026-05-05</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
-
-  <!-- PAGES -->
   <url>
     <loc>https://mediagrabber.org/platforms</loc>
-    <lastmod>2026-05-07</lastmod>
+    <lastmod>2026-06-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
-
-  <url>
-    <loc>https://mediagrabber.org/en/live-stream</loc>
-    <lastmod>2026-05-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
   <url>
     <loc>https://mediagrabber.org/faq</loc>
-    <lastmod>2026-05-07</lastmod>
+    <lastmod>2026-06-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
-  <!-- BLOG MAIN -->
   <url>
     <loc>https://mediagrabber.org/blog</loc>
-    <lastmod>2026-05-07</lastmod>
+    <lastmod>2026-06-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
-
-  <!-- BLOG ARTICLE -->
   <url>
-    <loc>https://mediagrabber.org/blog/how-to-download-youtube-videos-fast</loc>
-    <lastmod>2026-05-07</lastmod>
+    <loc>https://mediagrabber.org/download-ai-video-mp3</loc>
+    <lastmod>2026-06-29</lastmod>
     <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://mediagrabber.org/live-chat</loc>
+    <lastmod>2026-06-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://mediagrabber.org/live-stream</loc>
+    <lastmod>2026-06-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <!-- Dedicated Platform Downloader Pages -->
+  <url>
+    <loc>https://mediagrabber.org/youtube-downloader</loc>
+    <lastmod>2026-06-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://mediagrabber.org/en/youtube-downloader</loc>
+    <lastmod>2026-06-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mediagrabber.org/fr/youtube-downloader</loc>
+    <lastmod>2026-06-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mediagrabber.org/ar/youtube-downloader</loc>
+    <lastmod>2026-06-29</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://mediagrabber.org/blog/tiktok-watermark-remover</loc>
-    <lastmod>2026-05-07</lastmod>
-    <changefreq>monthly</changefreq>
+    <loc>https://mediagrabber.org/youtube-to-mp3</loc>
+    <lastmod>2026-06-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://mediagrabber.org/en/youtube-to-mp3</loc>
+    <lastmod>2026-06-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mediagrabber.org/fr/youtube-to-mp3</loc>
+    <lastmod>2026-06-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mediagrabber.org/ar/youtube-to-mp3</loc>
+    <lastmod>2026-06-29</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
+  <url>
+    <loc>https://mediagrabber.org/tiktok-downloader</loc>
+    <lastmod>2026-06-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://mediagrabber.org/en/tiktok-downloader</loc>
+    <lastmod>2026-06-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mediagrabber.org/fr/tiktok-downloader</loc>
+    <lastmod>2026-06-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mediagrabber.org/ar/tiktok-downloader</loc>
+    <lastmod>2026-06-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://mediagrabber.org/instagram-downloader</loc>
+    <lastmod>2026-06-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://mediagrabber.org/en/instagram-downloader</loc>
+    <lastmod>2026-06-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mediagrabber.org/fr/instagram-downloader</loc>
+    <lastmod>2026-06-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mediagrabber.org/ar/instagram-downloader</loc>
+    <lastmod>2026-06-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://mediagrabber.org/facebook-downloader</loc>
+    <lastmod>2026-06-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://mediagrabber.org/en/facebook-downloader</loc>
+    <lastmod>2026-06-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mediagrabber.org/fr/facebook-downloader</loc>
+    <lastmod>2026-06-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mediagrabber.org/ar/facebook-downloader</loc>
+    <lastmod>2026-06-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://mediagrabber.org/twitter-downloader</loc>
+    <lastmod>2026-06-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://mediagrabber.org/en/twitter-downloader</loc>
+    <lastmod>2026-06-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mediagrabber.org/fr/twitter-downloader</loc>
+    <lastmod>2026-06-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mediagrabber.org/ar/twitter-downloader</loc>
+    <lastmod>2026-06-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://mediagrabber.org/x-downloader</loc>
+    <lastmod>2026-06-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://mediagrabber.org/en/x-downloader</loc>
+    <lastmod>2026-06-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mediagrabber.org/fr/x-downloader</loc>
+    <lastmod>2026-06-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mediagrabber.org/ar/x-downloader</loc>
+    <lastmod>2026-06-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Blog posts (generated from src/data/blog.ts) -->
+  <url>
+    <loc>https://mediagrabber.org/blog/how-to-download-youtube-videos-on-iphone-2026</loc>
+    <lastmod>2026-04-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mediagrabber.org/blog/iphone-18-pro-max-2026-features-price-release-date</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://mediagrabber.org/blog/shakhtar-donetsk-vs-crystal-palace-live-conference-league-semi-final</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://mediagrabber.org/blog/usm-alger-vs-cr-belouizdad-live-algeria-cup-final</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://mediagrabber.org/blog/nottingham-forest-vs-aston-villa-live-europa-league</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://mediagrabber.org/blog/esperance-vs-sfaxien-live-match-tunisia</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://mediagrabber.org/blog/how-to-download-snapchat-videos-and-make-money-2026</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mediagrabber.org/blog/best-way-to-download-tiktok-without-watermark</loc>
+    <lastmod>2026-04-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
   <url>
     <loc>https://mediagrabber.org/blog/instagram-reels-download-guide</loc>
-    <lastmod>2026-05-07</lastmod>
+    <lastmod>2026-04-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-
-  <!-- 🌍 MULTILINGUAL EN -->
   <url>
-    <loc>https://mediagrabber.org/en/blog</loc>
-    <lastmod>2026-05-07</lastmod>
-
-    <xhtml:link rel="alternate" hreflang="en" href="https://mediagrabber.org/en/blog"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://mediagrabber.org/fr/blog"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://mediagrabber.org/ar/blog"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://mediagrabber.org/en/blog"/>
-
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <!-- 🌍 MULTILINGUAL FR -->
-  <url>
-    <loc>https://mediagrabber.org/fr/blog</loc>
-    <lastmod>2026-05-07</lastmod>
-
-    <xhtml:link rel="alternate" hreflang="en" href="https://mediagrabber.org/en/blog"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://mediagrabber.org/fr/blog"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://mediagrabber.org/ar/blog"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://mediagrabber.org/en/blog"/>
-
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <!-- 🌍 MULTILINGUAL AR -->
-  <url>
-    <loc>https://mediagrabber.org/ar/blog</loc>
-    <lastmod>2026-05-07</lastmod>
-
-    <xhtml:link rel="alternate" hreflang="en" href="https://mediagrabber.org/en/blog"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://mediagrabber.org/fr/blog"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://mediagrabber.org/ar/blog"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://mediagrabber.org/en/blog"/>
-
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <url>
-    <loc>https://mediagrabber.org/fr/live-stream</loc>
-    <lastmod>2026-05-07</lastmod>
-
-    <xhtml:link rel="alternate" hreflang="en" href="https://mediagrabber.org/en/live-stream"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://mediagrabber.org/fr/live-stream"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://mediagrabber.org/ar/live-stream"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://mediagrabber.org/en/live-stream"/>
-
+    <loc>https://mediagrabber.org/blog/premier-league-champions-league-live-football-updates-2026</loc>
+    <lastmod>2026-05-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
-  
   <url>
-    <loc>https://mediagrabber.org/ar/live-stream</loc>
-    <lastmod>2026-05-07</lastmod>
-
-    <xhtml:link rel="alternate" hreflang="en" href="https://mediagrabber.org/en/live-stream"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://mediagrabber.org/fr/live-stream"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://mediagrabber.org/ar/live-stream"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://mediagrabber.org/en/live-stream"/>
-
-    <changefreq>weekly</changefreq>
+    <loc>https://mediagrabber.org/blog/how-to-download-ai-gemini-claude-chatgpt-tools-2026</loc>
+    <lastmod>2026-05-05</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://mediagrabber.org/blog/met-gala-2026-heidi-klum-spectacular-look-red-carpet</loc>
+    <lastmod>2026-05-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
 
 </urlset>

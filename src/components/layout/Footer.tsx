@@ -51,10 +51,12 @@ export function Footer() {
           <div>
             <h3 className="font-heading font-semibold text-gray-900 dark:text-white mb-4">{t('platforms.title')}</h3>
             <ul className="space-y-3">
-              <li><Link to={`${langPrefix}/platforms#youtube`} className="text-gray-500 hover:text-brand-500 dark:text-gray-400 dark:hover:text-brand-400 text-sm transition-colors">{t('seo.youtubeDownloader')}</Link></li>
-              <li><Link to={`${langPrefix}/platforms#tiktok`} className="text-gray-500 hover:text-brand-500 dark:text-gray-400 dark:hover:text-brand-400 text-sm transition-colors">{t('seo.tiktokDownloader')}</Link></li>
-              <li><Link to={`${langPrefix}/platforms#instagram`} className="text-gray-500 hover:text-brand-500 dark:text-gray-400 dark:hover:text-brand-400 text-sm transition-colors">{t('seo.instagramDownloader')}</Link></li>
-              <li><Link to={`${langPrefix}/platforms#facebook`} className="text-gray-500 hover:text-brand-500 dark:text-gray-400 dark:hover:text-brand-400 text-sm transition-colors">Facebook {t('seo.videoDownloader')}</Link></li>
+              <li><Link to={`${langPrefix}/youtube-downloader`} className="text-gray-500 hover:text-brand-500 dark:text-gray-400 dark:hover:text-brand-400 text-sm transition-colors">{t('seo.youtubeDownloader')}</Link></li>
+              <li><Link to={`${langPrefix}/youtube-to-mp3`} className="text-gray-500 hover:text-brand-500 dark:text-gray-400 dark:hover:text-brand-400 text-sm transition-colors">YouTube to MP3</Link></li>
+              <li><Link to={`${langPrefix}/tiktok-downloader`} className="text-gray-500 hover:text-brand-500 dark:text-gray-400 dark:hover:text-brand-400 text-sm transition-colors">{t('seo.tiktokDownloader')}</Link></li>
+              <li><Link to={`${langPrefix}/instagram-downloader`} className="text-gray-500 hover:text-brand-500 dark:text-gray-400 dark:hover:text-brand-400 text-sm transition-colors">{t('seo.instagramDownloader')}</Link></li>
+              <li><Link to={`${langPrefix}/facebook-downloader`} className="text-gray-500 hover:text-brand-500 dark:text-gray-400 dark:hover:text-brand-400 text-sm transition-colors">Facebook Downloader</Link></li>
+              <li><Link to={`${langPrefix}/twitter-downloader`} className="text-gray-500 hover:text-brand-500 dark:text-gray-400 dark:hover:text-brand-400 text-sm transition-colors">Twitter (X) Downloader</Link></li>
             </ul>
           </div>
 

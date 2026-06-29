@@ -137,7 +137,7 @@
         "seoBlockTitle": "Watch Manchester United vs Liverpool Live Stream Free",
         "seoBlockText": "Watch Manchester United vs Liverpool live stream free online in HD quality. Multiple stream sources available. No registration required — just click and watch."
     },
-    "chat": {
+        "chat": {
         "seoTitle": "Chat with Dalida — Live Community Chat | MediaGrabber",
         "seoDescription": "Chat with Dalida and the MediaGrabber community! Discuss football matches, video downloads, social media tips and more — no login required.",
         "title": "Free Live Chat!",
@@ -151,5 +151,85 @@
         "send": "Send",
         "seoBlockTitle": "What is MediaGrabber Community Chat?",
         "seoBlockText": "MediaGrabber Community Chat is a free, no-login live chat where users discuss football live streams, video downloading tips, social media content, and more. Chat in real time with people from around the world."
+    },
+    "platformPage": {
+        "youtube": {
+            "title": "YouTube Video Downloader",
+            "subtitle": "Download YouTube Videos & Shorts in HD",
+            "description": "Download YouTube videos and shorts in high quality MP4 or MP3 format. MediaGrabber's YouTube downloader is fast, free, secure, and requires no registration.",
+            "placeholder": "Paste YouTube link here (e.g. https://www.youtube.com/watch?v=...)",
+            "faqTitle": "YouTube Downloader FAQs",
+            "q1": "How do I download YouTube videos?",
+            "a1": "Copy the YouTube video or Shorts link, paste it into the input box above, click Download, select your desired resolution/format, and save it to your device.",
+            "q2": "Can I convert YouTube videos to MP3 audio?",
+            "a2": "Yes, MediaGrabber allows you to extract audio from any YouTube video and download it as a high-quality MP3 file.",
+            "q3": "Is it safe and free to download YouTube videos?",
+            "a3": "Absolutely. MediaGrabber is 100% free, secure, and doesn't require any software installation or registration."
+        },
+        "tiktok": {
+            "title": "TikTok Video Downloader",
+            "subtitle": "Download TikTok Videos Without Watermark",
+            "description": "Save TikTok videos in HD quality without watermark. MediaGrabber is the best online TikTok downloader to save TikTok videos as MP4 or MP3 quickly.",
+            "placeholder": "Paste TikTok link here (e.g. https://www.tiktok.com/@username/video/...)",
+            "faqTitle": "TikTok Downloader FAQs",
+            "q1": "How to download TikTok videos without watermark?",
+            "a1": "Copy the TikTok link from the app or website, paste it into the input box at the top of this page, and click Download. You will get options to download without watermark.",
+            "q2": "Can I download TikTok music or MP3?",
+            "a2": "Yes, you can extract and download the original audio or background music from any TikTok video in MP3 format.",
+            "q3": "Does this TikTok downloader work on mobile?",
+            "a3": "Yes, it works perfectly on all mobile devices (iOS, Android), tablets, and desktop computers via any web browser."
+        },
+        "instagram": {
+            "title": "Instagram Reels & Video Downloader",
+            "subtitle": "Download Instagram Reels, Photos & Stories",
+            "description": "Download Instagram reels, videos, stories, and photos in high quality. Fast, free, and anonymous Instagram downloader online.",
+            "placeholder": "Paste Instagram link here (e.g. https://www.instagram.com/reel/...)",
+            "faqTitle": "Instagram Downloader FAQs",
+            "q1": "How can I download Instagram Reels?",
+            "a1": "Copy the Reels link from Instagram, paste it into the input field above, and click Download. Select the quality you want and save it.",
+            "q2": "Do I need to log in with my Instagram account?",
+            "a2": "No, you do not need to log in or share any personal credentials. MediaGrabber works anonymously without registration.",
+            "q3": "Can I download photos and stories too?",
+            "a3": "Yes! You can download Instagram posts, carousel photos, videos, and stories by pasting their respective links."
+        },
+        "facebook": {
+            "title": "Facebook Video Downloader",
+            "subtitle": "Download Facebook Videos & Reels in HD",
+            "description": "Download Facebook videos and reels in HD or SD quality. Free, fast, and secure online Facebook downloader for PC, Android, and iOS.",
+            "placeholder": "Paste Facebook link here (e.g. https://www.facebook.com/.../videos/...)",
+            "faqTitle": "Facebook Downloader FAQs",
+            "q1": "How do I download videos from Facebook?",
+            "a1": "Click on 'Share' on the Facebook video, copy the link, paste it into our input box, and click Download. Select HD or SD quality to save the video.",
+            "q2": "Can I download private Facebook videos?",
+            "a2": "Currently, MediaGrabber supports downloading public Facebook videos and reels. Private videos are not supported for privacy reasons.",
+            "q3": "Does it support Facebook Reels?",
+            "a3": "Yes, you can download any public Facebook Reels in high-quality MP4 format using the same simple steps."
+        },
+        "twitter": {
+            "title": "Twitter (X) Video Downloader",
+            "subtitle": "Download X.com / Twitter Videos & GIFs",
+            "description": "Download X (Twitter) videos and GIFs in MP4 format. MediaGrabber's Twitter video downloader is fast, free, and requires no registration.",
+            "placeholder": "Paste X/Twitter link here (e.g. https://x.com/.../status/...)",
+            "faqTitle": "Twitter Downloader FAQs",
+            "q1": "How to download videos from Twitter (X)?",
+            "a1": "Copy the tweet URL containing the video or GIF, paste it into the input box above, and click Download to save it in MP4 format.",
+            "q2": "Can I download Twitter GIFs as MP4?",
+            "a2": "Yes, Twitter GIFs are automatically converted and can be downloaded as MP4 files to your device.",
+            "q3": "Is there a limit on Twitter video downloads?",
+            "a3": "No, you can download as many videos and GIFs from X/Twitter as you want, completely free."
+        },
+        "youtube-to-mp3": {
+            "title": "YouTube to MP3 Converter",
+            "subtitle": "Convert & Download YouTube Videos to High Quality MP3",
+            "description": "Convert YouTube videos to MP3 audio files in high quality (up to 320kbps). Free, fast, and secure online YouTube to MP3 converter.",
+            "placeholder": "Paste YouTube link here (e.g. https://www.youtube.com/watch?v=...)",
+            "faqTitle": "YouTube to MP3 FAQs",
+            "q1": "How do I convert a YouTube video to MP3?",
+            "a1": "Paste the YouTube video link in the input box, click Download, and choose the 'MP3 Audio' option from the download list to save the audio file.",
+            "q2": "What audio quality is supported?",
+            "a2": "We support high-quality audio extraction. The downloaded MP3 file will match the highest available audio stream quality from the source video.",
+            "q3": "Can I convert long YouTube videos to MP3?",
+            "a3": "Yes, you can convert videos of various lengths to MP3. The conversion takes just a few seconds."
+        }
     }
 }
